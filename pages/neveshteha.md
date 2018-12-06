@@ -15,7 +15,7 @@ layout: page
 <div dir="rtl">
 <ul style="margin-right: 20px;">
         {% for post in month.items %}
-<li> <a href="{{ post.url }}" >{{ post.title }}</a> </li>
+<li> <a href="{{ post.url }}" >{{ post.heading }}</a> </li>
         {% endfor %}
 </ul>
 </div>
