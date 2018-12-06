@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 768 576"
+   height="576"
+   width="768"
+   xml:space="preserve"
+   id="svg2"
+   version="1.1"><metadata
+     id="metadata8"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs6"><clipPath
+       id="clipPath18"
+       clipPathUnits="userSpaceOnUse"><path
+         style="clip-rule:evenodd"
+         id="path16"
+         d="M 0,9.155e-6 H 576 V 432.00001 H 0 Z" /></clipPath><clipPath
+       id="clipPath72"
+       clipPathUnits="userSpaceOnUse"><path
+         style="clip-rule:evenodd"
+         id="path70"
+         d="M -2.81e-7,432 H 576 V 9.155e-6 L 4.37e-7,6.104e-6" /></clipPath></defs><g
+     transform="matrix(1.3333333,0,0,-1.3333333,0,576)"
+     id="g10"><g
+       id="g12"><g
+         clip-path="url(#clipPath18)"
+         id="g14"><path
+           id="path20"
+           style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           d="M 0,3.052e-6 H 576 V 432 H 0 Z" /></g></g><path
+       id="path22"
+       style="fill:#4a7ebb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="M 134.44,92.143 V 369.82 h -2.25 V 92.143 Z m 3.78,271.497 -4.91,8.41 -4.91,-8.41 c -0.31,-0.54 -0.13,-1.23 0.41,-1.54 0.53,-0.32 1.22,-0.13 1.53,0.4 l 3.94,6.75 h -1.94 l 3.94,-6.75 c 0.31,-0.53 1,-0.72 1.53,-0.4 0.54,0.31 0.72,1 0.41,1.54 z" /><text
+       id="text26"
+       style="font-variant:normal;font-weight:bold;font-size:18px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';writing-mode:lr-tb;fill:#31859c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,63.36,385.18)"><tspan
+         id="tspan24"
+         y="0"
+         x="0 8.9099998 18.576 27.629999 37.313999 43.703999">Theory</tspan></text>
+<text
+       id="text30"
+       style="font-variant:normal;font-weight:bold;font-size:18px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';writing-mode:lr-tb;fill:#31859c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,115.64,385.18)"><tspan
+         id="tspan28"
+         y="0"
+         x="0">-</tspan></text>
+<text
+       id="text34"
+       style="font-variant:normal;font-weight:bold;font-size:18px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';writing-mode:lr-tb;fill:#31859c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,121.16,385.18)"><tspan
+         id="tspan32"
+         y="0"
+         x="0 10.098 18.99 26.1 35.099998">Based</tspan></text>
+<text
+       id="text38"
+       style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,167.26,322.24)"><tspan
+         id="tspan36"
+         y="0"
+         x="0 9.5939999 13.734 22.356001 29.393999 36.431999 40.571999 48.006001 56.627998">Classical</tspan></text>
+<text
+       id="text42"
+       style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,336.94,126.56)"><tspan
+         id="tspan40"
+         y="0"
+         x="0 9.7919998 18.054001 25.974001 34.938 41.976002 46.116001 54.737999">Bayesian</tspan></text>
+<path
+       id="path44"
+       style="fill:#4a7ebb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m 130.45,94.823 323.25,-1.545 -0.01,-2.25 -323.25,1.545 z m 317.09,2.269 8.39,-4.949 -8.44,-4.869 c -0.54,-0.311 -1.23,-0.126 -1.54,0.412 -0.31,0.538 -0.12,1.226 0.41,1.537 l 6.77,3.905 -0.01,-1.944 -6.73,3.97 c -0.53,0.316 -0.71,1.005 -0.39,1.54 0.31,0.536 1,0.714 1.54,0.398 z" /><text
+       id="text48"
+       style="font-variant:normal;font-weight:bold;font-size:18px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';writing-mode:lr-tb;fill:#31859c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,411.3,53.94)"><tspan
+         id="tspan46"
+         y="0"
+         x="0 9.5760002 15.606 24.497999 33.029999 47.664001 56.34 62.585999 67.014">Pragmatic</tspan></text>
+<text
+       id="text52"
+       style="font-variant:normal;font-weight:normal;font-size:18.02000046px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,148.96,66.54)"><tspan
+         id="tspan50"
+         y="0"
+         x="0 7.5683999 16.54236 23.5161">Less</tspan></text>
+<text
+       id="text56"
+       style="font-variant:normal;font-weight:normal;font-size:18.02000046px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,336.94,66)"><tspan
+         id="tspan54"
+         y="0"
+         x="0 15.4071 24.903641 30.958361">More</tspan></text>
+<text
+       id="text60"
+       style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0,1,1,0,112.02,99)"><tspan
+         id="tspan58"
+         y="0"
+         x="0 7.5599999 16.524 23.562">Less</tspan></text>
+<text
+       id="text64"
+       style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0,1,1,0,112.02,253.38)"><tspan
+         id="tspan62"
+         y="0"
+         x="0 15.39 24.875999 30.959999">More</tspan></text>
+<g
+       id="g66"><g
+         clip-path="url(#clipPath72)"
+         id="g68"><path
+           id="path74"
+           style="fill:#00b050;fill-opacity:0.36078001;fill-rule:evenodd;stroke:none"
+           d="m 203.49,307.14 45.4,3.7 -10.43,-12.28 129.59,-110.06 10.43,12.28 3.69,-45.4 -45.39,-3.7 10.42,12.28 -129.58,110.06 -10.43,-12.28 z" /></g></g><path
+       id="path76"
+       style="fill:#4a7ebb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="M 457.05,360 V 97.922 H 454.8 V 360 Z m 3.78,-255.89 -4.91,-8.417 -4.91,8.417 c -0.31,0.54 -0.13,1.22 0.41,1.54 0.54,0.31 1.22,0.13 1.54,-0.41 l 3.93,-6.747 h -1.94 l 3.94,6.747 c 0.31,0.54 1,0.72 1.54,0.41 0.53,-0.32 0.72,-1 0.4,-1.54 z" /><text
+       id="text80"
+       style="font-variant:normal;font-weight:bold;font-size:18px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';writing-mode:lr-tb;fill:#31859c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,376.08,384.7)"><tspan
+         id="tspan78"
+         y="0"
+         x="0 8.5139999 18.18 27.846001 32.436001 41.490002 49.068001 55.313999 59.742001 68.022003">Subjective</tspan></text>
+<text
+       id="text84"
+       style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0,-1,-1,0,468.72,350.62)"><tspan
+         id="tspan82"
+         y="0"
+         x="0 7.5599999 16.524 23.562">Less</tspan></text>
+<text
+       id="text88"
+       style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0,-1,-1,0,469.92,189.1)"><tspan
+         id="tspan86"
+         y="0"
+         x="0 15.39 24.875999 30.959999">More</tspan></text>
+</g></svg>

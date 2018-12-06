@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="{{ page.htmllang }}" dir="{{ page.htmldir }}" >
+  <head>
+    <meta charset="utf-8">
+    <title>Ramin Mojab</title>
+    <meta name="description" content="Ramin Mojab is a research assistant in Economics at Monetary and Banking Research Institute."> 
+    <meta name="author" content="Ramin Mojab"> 
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="shortcut icon"  href="{{ 'assets/me.ico?v=' | append: site.github.build_revision | relative_url}}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url}}">
+    <script>
+        MathJax.Hub.Config({
+            config: ["MMLorHTML.js"],
+            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+            jax: ["input/TeX"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true
+            },
+            TeX: {
+                TagSide: "right",
+                TagIndent: ".8em",
+                MultLineWidth: "85%",
+                equationNumbers: {
+                   autoNumber: "AMS",
+                },
+                unicode: {
+                   fonts: "STIXGeneral,'Arial Unicode MS'"
+                }
+            },
+            showProcessingMessages: false
+        });
+    </script>
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+<style>
+.topnav {
+  overflow: hidden;
+  border-style: solid;
+  border-color: darkgray;
+  background-color: ghostwhite;
+}
+
+.topnav a {
+  margin: 0;
+  float: center;
+  color: #777777;
+  text-shadow: 0 1px 0 #ffffff;
+  font-weight: 200;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; 
+}
+
+.topnav a:hover {
+  color: black;
+}
+</style>
+  </head>
+ 
+  <body>
+    <div class="outer">
+        <header class="inner">
+          <div class="topnav">
+		     <a href="/">Ramin Mojab</a>
+			 <a href="/pages/posts.html">Posts</a>
+			 <a href="/pages/neveshteha.html">نوشته‌ها</a>
+	      </div>
+        </header>
+    </div>
+   
+    <!-- MAIN CONTENT -->
+    <div class="outer"> 
+      <section  class="inner" style="background-color: ghostwhite;">
+        {{ content }}
+      </section> 
+    </div>
+
+	
+  </body>
+</html>

@@ -1,0 +1,26 @@
+---
+layout: default
+htmllang: en
+htmldir: ltr
+usediv: auto
+author: Ramin Mojab
+---
+<div>
+
+
+{% if page.usediv != 'auto' and page.usediv != 'ltr' and page.usediv != 'rtl' %}
+<h1> {{ page.heading }} </h1>
+<p style="color:navy;"> {{ page.author }} </p>
+{{ page.content }}
+{% else %}
+<div dir="{{ page.usediv }}"> 
+<h1> {{ page.heading }} </h1>
+<p dir="{{ page.usediv }}" style="color:navy;"> {{ page.author }} </p>
+</div>
+{% assign paragraphs = page.content | newline_to_br | strip_newlines | split: '<br />' %}
+{% for p in paragraphs %}
+<div dir="{{ page.usediv }}"> 
+{{ p }}
+</div>
+{% endfor %}
+{% endif %}

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 768 576"
+   height="576"
+   width="768"
+   xml:space="preserve"
+   id="svg2"
+   version="1.1"><metadata
+     id="metadata8"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs6"><clipPath
+       id="clipPath18"
+       clipPathUnits="userSpaceOnUse"><path
+         style="clip-rule:evenodd"
+         id="path16"
+         d="M 0,9.155e-6 H 576 V 432.00001 H 0 Z" /></clipPath><clipPath
+       id="clipPath86"
+       clipPathUnits="userSpaceOnUse"><path
+         style="clip-rule:evenodd"
+         id="path84"
+         d="M -2.001e-6,432 H 576 V 6.104e-6 L -3.136e-6,3.052e-6" /></clipPath></defs><g
+     transform="matrix(1.3333333,0,0,-1.3333333,0,576)"
+     id="g10"><g
+       id="g12"><g
+         clip-path="url(#clipPath18)"
+         id="g14"><path
+           id="path20"
+           style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           d="M 0,3.052e-6 H 576 V 432 H 0 Z" /></g></g><path
+       id="path22"
+       style="fill:#4a7ebb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="M 134.44,92.143 V 369.82 h -2.25 V 92.143 Z m 3.78,271.497 -4.91,8.41 -4.91,-8.41 c -0.31,-0.54 -0.13,-1.23 0.41,-1.54 0.53,-0.32 1.22,-0.13 1.53,0.4 l 3.94,6.75 h -1.94 l 3.94,-6.75 c 0.31,-0.53 1,-0.72 1.53,-0.4 0.54,0.31 0.72,1 0.41,1.54 z" /><text
+       id="text26"
+       style="font-variant:normal;font-weight:bold;font-size:18px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';writing-mode:lr-tb;fill:#31859c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,63.36,397.78)"><tspan
+         id="tspan24"
+         y="0"
+         x="0 10.908 18.09 25.271999 34.938 49.571999 59.094002 65.339996 69.767998 79.379997 88.973999">Assumptions</tspan></text>
+<text
+       id="text30"
+       style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,311.46,326.48)"><tspan
+         id="tspan28"
+         y="0"
+         x="0 8.2620001 17.712 21.851999 25.992001 30.096001 39.042 47.664001 53.622002 62.243999 76.625999 85.482002 91.512001 97.793999 101.934">Full Parametric</tspan></text>
+<text
+       id="text34"
+       style="font-variant:normal;font-weight:normal;font-size:18.02000046px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,157.26,128.02)"><tspan
+         id="tspan32"
+         y="0"
+         x="0 11.64092 21.137461">Non</tspan></text>
+<text
+       id="text38"
+       style="font-variant:normal;font-weight:normal;font-size:18.02000046px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,187.88,128.02)"><tspan
+         id="tspan36"
+         y="0"
+         x="0">-</tspan></text>
+<text
+       id="text42"
+       style="font-variant:normal;font-weight:normal;font-size:18.02000046px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,193.4,128.02)"><tspan
+         id="tspan40"
+         y="0"
+         x="0 8.9379196 17.5695 23.5161 32.147678 46.545658 55.375462 61.412159 67.701141 71.845741">Parametric</tspan></text>
+<path
+       id="path44"
+       style="fill:#4a7ebb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m 130.45,94.823 323.25,-1.545 -0.01,-2.25 -323.25,1.545 z m 317.09,2.269 8.39,-4.949 -8.44,-4.869 c -0.54,-0.311 -1.23,-0.126 -1.54,0.412 -0.31,0.538 -0.12,1.226 0.41,1.537 l 6.77,3.905 -0.01,-1.944 -6.73,3.97 c -0.53,0.316 -0.71,1.005 -0.39,1.54 0.31,0.536 1,0.714 1.54,0.398 z" /><text
+       id="text48"
+       style="font-variant:normal;font-weight:bold;font-size:18px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';writing-mode:lr-tb;fill:#31859c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,411.3,53.94)"><tspan
+         id="tspan46"
+         y="0"
+         x="0 9.5220003 19.205999 28.872 36.396 40.824001 50.400002 57.582001 61.919998 71.603996 81.18">Conclusions</tspan></text>
+<text
+       id="text52"
+       style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,143.86,77.1)"><tspan
+         id="tspan50"
+         y="0"
+         x="0 15.354 24.318001 32.939999">Weak</tspan></text>
+<text
+       id="text56"
+       style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,328.5,77.1)"><tspan
+         id="tspan54"
+         y="0"
+         x="0 8.2620001 14.292 20.285999 29.771999 39.222">Strong</tspan></text>
+<text
+       id="text60"
+       style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0,1,1,0,112.02,99)"><tspan
+         id="tspan58"
+         y="0"
+         x="0 7.5599999 17.046">Low</tspan></text>
+<text
+       id="text64"
+       style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0,1,1,0,112.02,253.38)"><tspan
+         id="tspan62"
+         y="0"
+         x="0 11.214 15.354 23.832001">High</tspan></text>
+<path
+       id="path66"
+       style="fill:#4a7ebb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="M 455.92,360.62 V 95.921 h -2.25 V 360.62 Z m 3.78,-258.51 -4.91,-8.418 -4.91,8.418 c -0.31,0.53 -0.13,1.22 0.41,1.54 0.53,0.31 1.22,0.13 1.54,-0.41 l 3.93,-6.748 h -1.94 l 3.94,6.748 c 0.31,0.54 1,0.72 1.54,0.41 0.53,-0.32 0.71,-1 0.4,-1.54 z" /><text
+       id="text70"
+       style="font-variant:normal;font-weight:bold;font-size:18.02000046px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';writing-mode:lr-tb;fill:#31859c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,383.84,399.18)"><tspan
+         id="tspan68"
+         y="0"
+         x="0 9.8389196 19.53368 29.210421 38.815079 45.770802 52.023739 61.700481 70.674438 77.864418">Robustness</tspan></text>
+<text
+       id="text74"
+       style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0,-1,-1,0,470.26,346.46)"><tspan
+         id="tspan72"
+         y="0"
+         x="0 7.5599999 16.974001">Low</tspan></text>
+<text
+       id="text78"
+       style="font-variant:normal;font-weight:normal;font-size:18.02000046px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0,-1,-1,0,475.24,207.04)"><tspan
+         id="tspan76"
+         y="0"
+         x="0 11.22646 15.37106 23.85848">High</tspan></text>
+<g
+       id="g80"><g
+         clip-path="url(#clipPath86)"
+         id="g82"><path
+           id="path88"
+           style="fill:#00b050;fill-opacity:0.36078001;fill-rule:evenodd;stroke:none"
+           d="m 201.55,152.19 5.31,45.23 9.98,-12.64 132.73,104.83 -9.98,12.63 45.23,-5.31 -5.31,-45.23 -9.98,12.63 -132.73,-104.82 9.98,-12.64 z" /></g></g></g></svg>

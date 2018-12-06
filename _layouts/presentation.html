@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>{{ heading }}</title>
+		 <link rel="shortcut icon"  href="{{ '../../../assets/me.ico?v=' | append: site.github.build_revision | relative_url}}">
+		<link rel="stylesheet" href="../../../assets/presentation/css/reveal.css">
+		<link rel="stylesheet" href="../../../assets/presentation/css/theme/white.css">
+	</head>
+	<body>
+		<div class="reveal">
+		    <div class="slides"> 
+				
+ 
+{{page.content}}
+ 
+	        </div> 
+		</div> 
+
+<style type="text/css">
+    #header-left {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+    }
+    #header-right {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+    }
+    #footer-left {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+		z-index:100;
+    }
+</style>
+
+<div id="hidden" style="display:none;">
+    <div id="header">
+        <div id="header-left"></div>
+        <div id="header-right"></div>
+         <div id="footer-left"><a href="https://rmojab63.github.io/" target="_blank">
+		<img src="../../../assets/me.ico" alt="RM" style="width:16px;height:16px;border:0;">
+		</a></div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+    // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+    var header = $('#header').html();
+    if ( window.location.search.match( /print-pdf/gi ) ) {
+        Reveal.addEventListener( 'ready', function( event ) {
+            $('.slide-background').append(header);
+        });
+    }
+    else {
+        $('div.reveal').append(header);
+   }
+</script>
+
+
+		<script src="../../../assets/presentation/lib/js/head.min.js"></script>
+		<script src="../../../assets/presentation/js/reveal.js"></script>  
+
+		<script>
+			Reveal.initialize({
+	dependencies: [
+		// Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+		{ src: '../../../assets/presentation/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+		// Interpret Markdown in <section> elements
+		{ src: '../../../assets/presentation/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: '../../../assets/presentation/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+		// Syntax highlight for <code> elements
+		{ src: '../../../assets/presentation/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+		// Zoom in and out with Alt+click
+		{ src: '../../../assets/presentation/plugin/zoom-js/zoom.js', async: true },
+
+		// Speaker notes
+		{ src: '../../../assets/presentation/plugin/notes/notes.js', async: true },
+
+		// MathJax
+		{ src: '../../../assets/presentation/plugin/math/math.js', async: true }
+	]
+});
+
+		</script>
+	</body>
+</html>
