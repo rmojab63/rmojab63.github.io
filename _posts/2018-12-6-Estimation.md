@@ -185,7 +185,55 @@ SlideNextV
 
 ![CDF Normal 4](../../../assets/svgs/distributions/normalCDF4.svg) 
      
+SlideNext
+
+# Inverse-Gamma Model
+- Alternatively,you might choose the following set of distributions;  
   
+$$  
+\\{\frac{\beta^{\alpha}}{\Gamma(\alpha)}\frac{1}{x^{\alpha+1}}{e^{-\frac{\beta}{x}}}:~\alpha,\beta\in \mathbb{R}_{+}\\}  
+$$  
+
+- $\alpha$ is the _shape_ parameter. It is not _location_ parameter, which simply shifts the distribution. 
+
+- $\beta$ is the _scale_ parameters. Larger value means the distribution will be more spread out. Smaller value means it will be more concentrated.
+
+- As you will see later, its main use  is in Bayesian statistics.
+
+SlideNextV
+
+# PDF
+$$
+f(x) = \frac{\beta^{\alpha}}{\Gamma(\alpha)}\frac{1}{x^{\alpha+1}}e^{-\frac{\beta}{x}}
+$$
+
+- $x,\alpha,\beta > 0$
+
+- mean: $\frac{\beta}{\alpha-1}, \text{ for } \alpha>1$
+- variance: $\frac{\beta^2}{(\alpha-1)^2(\alpha-2)}, \text{ for }\alpha>2$
+- notation: $IG(\alpha,\beta)$
+  
+  
+SlideNextV
+
+![Inverse Gamma 1](../../../assets/svgs/distributions/inversegamma1.svg) 
+
+SlideNextV
+
+# Derivation from Gamma
+- Gamma PDF:
+$$
+f(y) = \frac{\theta^{\alpha}}{\Gamma(\alpha)}y^{\alpha-1}e^{-\theta y}
+$$
+- Note that in this parameterization, $\theta$ is the _rate_ parameter. 
+$$
+f(x)=f(\frac{1}{x})|-\frac{1}{x^2}|=\frac{\theta^{\alpha}}{\Gamma(\alpha)}(\frac{1}{x})^{\alpha-1}e^{-\theta\frac{1}{x}}\frac{1}{x^2}
+$$
+$$
+f(x) = \frac{\theta^{\alpha}}{\Gamma(\alpha)}\frac{1}{x^{\alpha+1}}e^{-\frac{\theta}{x}}
+$$
+-  $\theta$ plays the _scale_ role, therefore, its better to use another representation, i.e., $\beta$.
+
 SlideNext
   
 # Level of Assumptions  
@@ -270,7 +318,7 @@ $$
 Do some math and you will find two familiar formulas,
 $$
 \begin{cases}
-\hat{\mu}_N=\frac{\underset{i=1}{\overset{N}{\sum}} x_i}{N}\\
+\hat{\mu}_N=\frac{\underset{i=1}{\overset{N}{\sum}} x_i}{N} \\\\
 \hat{\sigma}_N^2=\frac{\underset{i=1}{\overset{N}{\sum}}(x_i-\hat{\mu})^2}{N}
 \end{cases}
 $$
@@ -281,7 +329,7 @@ SlideNextV
 ## The Mathematics  (continued)
 $$
 \text{FOC}:\begin{cases}
-\frac{\partial{lnL}}{\partial{\mu}}=\frac{1}{\hat{\sigma}^2}\underset{i=1}{\overset{N}{\sum}}(x_i-\mu)=0\\
+\frac{\partial{lnL}}{\partial{\mu}}=\frac{1}{\hat{\sigma}^2}\underset{i=1}{\overset{N}{\sum}}(x_i-\mu)=0 \\\\
 \frac{\partial{lnL}}{\partial{\sigma^2}}=\frac{N}{2\sigma^4}+\frac{1}{\hat{\sigma}^2}\underset{i=1}{\overset{N}{\sum}}(x_i-\mu)^2=0
 \end{cases}
 $$
@@ -294,7 +342,7 @@ $$
 \end{bmatrix}
 $$
 
-- substituting the solutions results in a diagonal matrix with negative elements (i.e., a negative definite matrix)
+- substituting the FOC results in a diagonal matrix with negative elements (i.e., a negative definite matrix)
 
 
 SlideNextV
@@ -302,7 +350,7 @@ SlideNextV
 ## Properties
 - Given a MLE such as $\hat{\boldsymbol{\theta}}_N$ for $\boldsymbol{\theta} \in \boldsymbol{\Theta}$, we can prove that
 $$
-\sqrt{N}(\hat{\boldsymbol{\theta}}_N-\boldsymbol{\theta})\overset{d}{\rightarrow}N(\boldsymbol{\theta},\mathbf{I}^{-1})
+\sqrt{N}(\hat{\boldsymbol{\theta}}_N-\boldsymbol{\theta})\overset{d}{\rightarrow}N(\mathbf{0},\mathbf{I}^{-1})
 $$
 - The variance is the inverse of the Fisher Information matrix.
 - We can also prove that for a consistent and asymptotically normally distributed estimator such as $\tilde{\boldsymbol{\theta}}_N$,
@@ -418,6 +466,154 @@ SlideNextV
  
 SlideNext
 
+# Regression Model
+- Consider the following set of distributions:
+$$  
+\\{\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{y-a-b x}{\sigma})^2}:~a,b\in \mathbb{R},~\sigma\in \mathbb{R}_{+}\\}  
+$$
+- Letting $\epsilon=y-a-b x$, we can see this is a normal model for $\epsilon$, in which 
+  + $E(\epsilon) = 0$; and
+  + $var(\epsilon)=\sigma^2$.
+- We generally use the following equation to describe this model:
+$$
+y=a+b x+\epsilon, \; \epsilon\sim N(0,\sigma^2)
+$$
+- This is known as a **simple linear regression model**.
+- Note that the model can be semi-parametric;i.e.,
+$$
+y=a+b x+\epsilon, \; E(\epsilon)=0,\;var(\epsilon)=\sigma^2
+$$
+
+SlideNextV
+
+# Theoretical Model
+- Where does $y, x, a, b$, and the linear relationship come from?
+- Let  $y$ be a person’s wage (measured in dollars per hour); and $x$ be her observed years of education.
+- Assume that there is a theory which points to a mathematical equation that describes a linear relationship between these two variables;
+$$
+y=a+b x, \; a,b\in \mathbb{R}
+$$
+- Note that the theory might restrict the parameters; e.g., $b>0$.
+
+SlideNextV
+
+# Theoretical Model vs. Regression Model
+- _Formal_ theoretical modeling is a good starting point for empirical analysis, but it is not essential.
+  + It might rely entirely on intuition or common sense.
+- Regression model is a generalization of the theoretical model:
+  + The form of the functions must be specified in a regression model.
+  + The choice of the variables in a regression model is determined by data considerations, as well as theory.
+  + In a regression model, we should deal with the _disturbance term_.
+
+SlideNext
+
+# MLE (continued)
+- Given data (i.e., a set such as $\\{(y_i,x_i)\\}$ for $i=1,...,N$) and similar to the previous discussion, we can calculate the MLE estimators.
+- Let $\hat{e}_i=x_i-\hat{a}-\hat{b}x_i$;
+
+$$
+\text{FOC}:\begin{cases}
+\frac{\partial{lnL}}{\partial{a}}=\frac{1}{\hat{\sigma}^2}\underset{i=1}{\overset{N}{\sum}}\hat{e}_i=0 \\\\
+\frac{\partial{lnL}}{\partial{b}}=\frac{1}{\hat{\sigma}^2}\underset{i=1}{\overset{N}{\sum}}x_i\hat{e}_i=0 \\\\
+\frac{\partial{lnL}}{\partial{\sigma^2}}=\frac{N}{2\sigma^4}+\frac{1}{\hat{\sigma}^2}\underset{i=1}{\overset{N}{\sum}}\hat{e}_i^2=0
+\end{cases}
+$$
+
+SlideNextV
+# MLE (Observed Hessian)
+
+$$
+\text{Hessian}: \mathbf{H}=
+\begin{bmatrix}
+\frac{-N}{\sigma^{2}} & -\frac{1}{\sigma^4}\underset{i=1}{\overset{N}{\sum}}\hat{e}_i \\\\
+-\frac{1}{\sigma^4}\underset{i=1}{\overset{N}{\sum}}\hat{e}_i&\frac{N}{2\sigma^4}-\frac{1}{\sigma^6}\underset{i=1}{\overset{N}{\sum}}\hat{e}_i^2
+\end{bmatrix}
+$$
+
+- Use FOCs to show this matrix is diagonal and negative definite at the solution.
+
+SlideNextV
+
+# The MLE Estimators
+- Let $\bar{z}_N=\frac{\underset{i=1}{\overset{N}{\sum}} x_i}{N}$, we have:
+$$
+\begin{cases}
+\hat{a}_N = \bar{y}_N-\hat{b}_N\bar{x}_N \\\\
+\hat{b}_N =\frac{\underset{i=1}{\overset{N}{\sum}}(x_i-\bar{x}_N)(y_i-\bar{y}_N)}{\underset{i=1}{\overset{N}{\sum}}(\hat{x}_i-\bar{x}_N)^2} \\\\
+\hat{\sigma}_N^2=\frac{\underset{i=1}{\overset{N}{\sum}}\hat{e}_i^2}{N} \\\\
+\end{cases}
+$$
+- Apart from the mathematics and the formula, other general results of the normal model are valid.
+
+SlideNextV
+# Multiple Regression
+
+- The generalization for manipulating more variables from theory is straight-forward.
+- ...
+
+SlideNext
+
+# Bayes Estimator (continued)
+- We consider a multiple regression model.
+- The discussion is generally the same as before, i.e., the normal model.
+- However, instead of normal-inverse gamma prior, lets use **normal gamma** for a change.
+
+SlideNextV
+# The Prior
+
+$$
+\begin{cases}
+\sigma^{-2} \sim G(\underline{\alpha}, \underline{\theta}),\\\\
+\boldsymbol{\beta}| \sigma^2 \sim N(\underline{\boldsymbol{\beta}}, \underline{\boldsymbol{\Omega}}\sigma^2)
+\end{cases}
+$$
+- For example, for a simple regression model, $\boldsymbol{\beta}=(a,b)'$ and prior hyperparameters are:
+  + $\underline{\boldsymbol{\beta}}=(\underline{a},\underline{b})'$
+  + $\underline{\boldsymbol{\Omega}}=
+\begin{bmatrix}
+\underline{\omega}\_{11}&\underline{\omega}\_{12}\\\\
+\underline{\omega}\_{21}&\underline{\omega}\_{22}
+\end{bmatrix}$
+
+SlideNextV
+# Posterior
+
+$$
+(\boldsymbol{\beta}',\sigma^2|x_1,...,x_N) \sim \text{NG}(\overline{\boldsymbol{\beta}},\overline{\boldsymbol{\Omega}},\overline{\alpha},\overline{\theta})
+$$
+- where:
+$$
+\begin{cases}
+\overline{\boldsymbol{\Omega}}=(\underline{\boldsymbol{\Omega}}^{-1}+\mathbf{X'X})^{-1}\\\\
+\overline{\boldsymbol{\beta}}=\overline{\boldsymbol{\Omega}}(\underline{\boldsymbol{\Omega}}^{-1}\underline{\boldsymbol{\beta}}+\mathbf{X'X}\hat{\boldsymbol{\beta}})\\\\
+\overline{\theta}=\underline{\theta}+N\\\\
+\overline{\alpha}=\frac{\underline{\theta}}{\underline{\theta}+N}\underline{\alpha}+\frac{N-1}{\underline{\theta}+N}s^2+\frac{1}{\underline{\theta}+N}(\hat{\boldsymbol{\beta}}-\underline{\boldsymbol{\beta}})[\underline{\boldsymbol{\Omega}}+(\mathbf{X'X})^{-1}]^{-1}(\hat{\boldsymbol{\beta}}-\underline{\boldsymbol{\beta}})'
+\end{cases}
+$$
+
+SlideNextV
+# Some Notes
+- Summation of the weights in $\overline{\boldsymbol{\beta}}$:
+$$
+\overline{\boldsymbol{\Omega}}\underline{\boldsymbol{\Omega}}^{-1}+\overline{\boldsymbol{\Omega}}\mathbf{X'X}=(\underline{\boldsymbol{\Omega}}^{-1}+\mathbf{X'X})^{-1}(\underline{\boldsymbol{\Omega}}^{-1}+\mathbf{X'X})=\mathbf{I}
+$$
+- Large number of observations:
+$$N\rightarrow \infty \Rightarrow \mathbf{X'X} \rightarrow [\infty] \Rightarrow \overline{\boldsymbol{\Omega}}\rightarrow \mathbf{0} \Rightarrow \begin{cases}
+\overline{\boldsymbol{\beta}}=\hat{\boldsymbol{\beta}}\\\\
+\overline{\alpha}=s^2
+\end{cases}
+$$
+- High prior uncertainty:
+$$
+\underline{\boldsymbol{\Omega}} \rightarrow [\infty] \Rightarrow \overline{\boldsymbol{\beta}}=\hat{\boldsymbol{\beta}}
+$$
+- Prior certainty:
+$$
+\underline{\boldsymbol{\Omega}} \rightarrow \mathbf{0} \Rightarrow \overline{\boldsymbol{\beta}}=\underline{\boldsymbol{\beta}}
+$$
+
+
+SlideNext
 The End
 
  
