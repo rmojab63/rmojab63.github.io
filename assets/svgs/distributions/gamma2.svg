@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="600" height="400" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <polyline points="34.54,345.6479 30.54,345.6479" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,329.7909 30.54,329.7909" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,313.9339 30.54,313.9339" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,282.2199 30.54,282.2199" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,266.3628 30.54,266.3628" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,250.5058 30.54,250.5058" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,218.7918 30.54,218.7918" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,202.9348 30.54,202.9348" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,187.0777 30.54,187.0777" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,155.3637 30.54,155.3637" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,139.5067 30.54,139.5067" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,123.6497 30.54,123.6497" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,91.9356 30.54,91.9356" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,76.0786 30.54,76.0786" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,60.2216 30.54,60.2216" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,28.5076 30.54,28.5076" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,12.6505 30.54,12.6505" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="48.355,365.04 48.355,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="77.5304,365.04 77.5304,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="106.7057,365.04 106.7057,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="135.881,365.04 135.881,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="194.2317,365.04 194.2317,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="223.4071,365.04 223.4071,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="252.5824,365.04 252.5824,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="281.7578,365.04 281.7578,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="340.1085,365.04 340.1085,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="369.2838,365.04 369.2838,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="398.4591,365.04 398.4591,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="427.6345,365.04 427.6345,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="485.9852,365.04 485.9852,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="515.1605,365.04 515.1605,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="544.3359,365.04 544.3359,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="573.5112,365.04 573.5112,369.04" style="fill:none;stroke:black;stroke-width:1" />
+  <text dominant-baseline="middle" text-anchor="end" transform="translate(23.54,361.505)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">0</text>
+  <text dominant-baseline="middle" text-anchor="end" transform="translate(23.54,298.0769)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">0.2</text>
+  <text dominant-baseline="middle" text-anchor="end" transform="translate(23.54,234.6488)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">0.4</text>
+  <text dominant-baseline="middle" text-anchor="end" transform="translate(23.54,171.2207)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">0.6</text>
+  <text dominant-baseline="middle" text-anchor="end" transform="translate(23.54,107.7927)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">0.8</text>
+  <text dominant-baseline="middle" text-anchor="end" transform="translate(23.54,44.3646)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">1</text>
+  <polyline points="34.54,361.505 27.54,361.505" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,298.0769 27.54,298.0769" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,234.6488 27.54,234.6488" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,171.2207 27.54,171.2207" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,107.7927 27.54,107.7927" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="34.54,44.3646 27.54,44.3646" style="fill:none;stroke:black;stroke-width:1" />
+  <text dominant-baseline="hanging" text-anchor="middle" transform="translate(165.0564,376.04)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">0.5</text>
+  <text dominant-baseline="hanging" text-anchor="middle" transform="translate(310.9331,376.04)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">1</text>
+  <text dominant-baseline="hanging" text-anchor="middle" transform="translate(456.8098,376.04)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">1.5</text>
+  <polyline points="165.0564,365.04 165.0564,372.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="310.9331,365.04 310.9331,372.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="456.8098,365.04 456.8098,372.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polyline points="40.0594,196.7038 48.812,147.7507 57.5646,108.4451 66.3172,77.4889 75.0698,53.7361 83.8224,36.176 92.575,23.9185 101.3276,16.181 110.0802,12.2762 118.8328,11.6017 127.5854,13.6303 136.338,17.9018 145.0906,24.0149 153.8432,31.6211 162.5958,40.4181 171.3485,50.1445 180.1011,60.5752 188.8537,71.5169 197.6063,82.8043 206.3589,94.297 215.1115,105.8759 223.8641,117.441 232.6167,128.9091 241.3693,140.211 250.1219,151.2905 258.8745,162.1021 267.6271,172.6098 276.3797,182.7859 285.1323,192.6096 293.8849,202.0663 302.6375,211.1462 311.3901,219.8442 320.1427,228.1588 328.8953,236.0916 337.6479,243.6466 346.4005,250.8301 355.1531,257.6502 363.9057,264.1162 372.6583,270.2384 381.4109,276.0283 390.1635,281.4975 398.9161,286.6585 407.6687,291.5238 416.4213,296.106 425.1739,300.4179 433.9265,304.472 442.6791,308.2808 451.4318,311.8564 460.1844,315.2108 468.937,318.3555 477.6896,321.3019 486.4422,324.0607 495.1948,326.6425 503.9474,329.0572 512.7,331.3145 521.4526,333.4236 530.2052,335.3933 538.9578,337.232 547.7104,338.9476 556.463,340.5477 565.2156,342.0394 573.9682,343.4296 582.7208,344.7247" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+  <polyline points="40.0594,196.7038 48.812,147.7507 57.5646,108.4451 66.3172,77.4889 75.0698,53.7361 83.8224,36.176 92.575,23.9185 99.3524,17.5692" style="fill:none;stroke:none;" />
+  <polyline points="99.3524,361.505 40.0594,361.505" style="fill:none;stroke:none;" />
+  <polygon points="99.3524,361.505 40.0594,361.505 40.0594,196.7038 48.812,147.7507 57.5646,108.4451 66.3172,77.4889 75.0698,53.7361 83.8224,36.176 92.575,23.9185 99.3524,17.5692" style="fill:rgb(0,0,0);fill-opacity:0.784313725490196;stroke:none;" />
+  <polyline points="99.3524,17.5692 108.105,12.855 116.8576,11.5 125.6102,12.9611 134.3628,16.7634 143.1154,22.4932 151.868,29.7905 153.0382,30.8675" style="fill:none;stroke:none;" />
+  <polyline points="153.0382,361.505 99.3524,361.505" style="fill:none;stroke:none;" />
+  <polygon points="153.0382,361.505 99.3524,361.505 99.3524,17.5692 108.105,12.855 116.8576,11.5 125.6102,12.9611 134.3628,16.7634 143.1154,22.4932 151.868,29.7905 153.0382,30.8675" style="fill:rgb(0,0,255);fill-opacity:0.784313725490196;stroke:none;" />
+  <polyline points="153.0382,30.8675 161.7908,39.5665 170.5434,49.2173 179.296,59.5918 188.0486,70.4938 196.8012,81.7556 205.5538,93.2347 214.3064,104.8101 215.852,106.8561" style="fill:none;stroke:none;" />
+  <polyline points="215.852,361.505 153.0382,361.505" style="fill:none;stroke:none;" />
+  <polygon points="215.852,361.505 153.0382,361.505 153.0382,30.8675 161.7908,39.5665 170.5434,49.2173 179.296,59.5918 188.0486,70.4938 196.8012,81.7556 205.5538,93.2347 214.3064,104.8101 215.852,106.8561" style="fill:rgb(255,0,0);fill-opacity:0.784313725490196;stroke:none;" />
+  <polyline points="215.852,106.8561 224.6046,118.4161 233.3572,129.8725 242.1098,141.1576 250.8624,152.2161 259.615,163.0032 268.3676,173.4839 277.1202,183.6309 285.8728,193.4241 294.6254,202.8491 303.378,211.8969 310.3796,218.8596" style="fill:none;stroke:none;" />
+  <polyline points="310.3796,361.505 215.852,361.505" style="fill:none;stroke:none;" />
+  <polygon points="310.3796,361.505 215.852,361.505 215.852,106.8561 224.6046,118.4161 233.3572,129.8725 242.1098,141.1576 250.8624,152.2161 259.615,163.0032 268.3676,173.4839 277.1202,183.6309 285.8728,193.4241 294.6254,202.8491 303.378,211.8969 310.3796,218.8596" style="fill:rgb(0,128,0);fill-opacity:0.784313725490196;stroke:none;" />
+  <polyline points="310.3796,218.8596 319.1322,227.2184 327.8848,235.1951 336.6374,242.7934 345.39,250.0195 354.1426,256.8811 362.8952,263.3874 371.6478,269.5488 380.4004,275.3764 389.153,280.8821 397.9056,286.078 406.6582,290.9768 415.4108,295.591 424.1634,299.9335 432.916,304.0167 441.6686,307.8532 450.4212,311.4551 459.1738,314.8344 467.9264,318.0028 476.679,320.9715 485.4317,323.7515 494.1843,326.3531 502.9369,328.7866 511.6895,331.0616 520.4421,333.1874 529.1947,335.1728 537.9473,337.0261 546.6999,338.7555 555.4525,340.3686 564.2051,341.8725 572.9577,343.2741 581.7103,344.5799 586.5352,345.2609" style="fill:none;stroke:none;" />
+  <polyline points="586.5352,361.505 310.3796,361.505" style="fill:none;stroke:none;" />
+  <polygon points="586.5352,361.505 310.3796,361.505 310.3796,218.8596 319.1322,227.2184 327.8848,235.1951 336.6374,242.7934 345.39,250.0195 354.1426,256.8811 362.8952,263.3874 371.6478,269.5488 380.4004,275.3764 389.153,280.8821 397.9056,286.078 406.6582,290.9768 415.4108,295.591 424.1634,299.9335 432.916,304.0167 441.6686,307.8532 450.4212,311.4551 459.1738,314.8344 467.9264,318.0028 476.679,320.9715 485.4317,323.7515 494.1843,326.3531 502.9369,328.7866 511.6895,331.0616 520.4421,333.1874 529.1947,335.1728 537.9473,337.0261 546.6999,338.7555 555.4525,340.3686 564.2051,341.8725 572.9577,343.2741 581.7103,344.5799 586.5352,345.2609" style="fill:rgb(255,255,0);fill-opacity:0.784313725490196;stroke:none;" />
+  <polygon points="34.54,8 592,8 592,365.04 34.54,365.04" style="fill:none;stroke:black;stroke-width:1" />
+  <polygon points="437.3033,16 584,16 584,133.76 437.3033,133.76" style="fill:none;stroke:none;" />
+  <text dominant-baseline="hanging" text-anchor="start" transform="translate(465.3033,24)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">Gamma(α = 2, β = 3)</text>
+  <polyline points="445.3033,31.98 461.3033,31.98" style="fill:none;stroke:black;stroke-width:1" />
+  <text dominant-baseline="hanging" text-anchor="start" transform="translate(465.3033,40.96)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">Q=(0-20)%</text>
+  <polyline points="445.3033,53.728 461.3033,53.728" style="fill:none;stroke:none;" />
+  <polyline points="461.3033,44.152 445.3033,50.536" style="fill:none;stroke:none;" />
+  <polygon points="445.3033,53.728 461.3033,53.728 461.3033,44.152 445.3033,50.536" style="fill:rgb(0,0,0);fill-opacity:0.784313725490196;stroke:none;" />
+  <text dominant-baseline="hanging" text-anchor="start" transform="translate(465.3033,57.92)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">Q=(20-40)%</text>
+  <polyline points="445.3033,70.688 461.3033,70.688" style="fill:none;stroke:none;" />
+  <polyline points="461.3033,61.112 445.3033,67.496" style="fill:none;stroke:none;" />
+  <polygon points="445.3033,70.688 461.3033,70.688 461.3033,61.112 445.3033,67.496" style="fill:rgb(0,0,255);fill-opacity:0.784313725490196;stroke:none;" />
+  <text dominant-baseline="hanging" text-anchor="start" transform="translate(465.3033,74.88)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">Q=(40-60)%</text>
+  <polyline points="445.3033,87.648 461.3033,87.648" style="fill:none;stroke:none;" />
+  <polyline points="461.3033,78.072 445.3033,84.456" style="fill:none;stroke:none;" />
+  <polygon points="445.3033,87.648 461.3033,87.648 461.3033,78.072 445.3033,84.456" style="fill:rgb(255,0,0);fill-opacity:0.784313725490196;stroke:none;" />
+  <text dominant-baseline="hanging" text-anchor="start" transform="translate(465.3033,91.84)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">Q=(60-80)%</text>
+  <polyline points="445.3033,104.608 461.3033,104.608" style="fill:none;stroke:none;" />
+  <polyline points="461.3033,95.032 445.3033,101.416" style="fill:none;stroke:none;" />
+  <polygon points="445.3033,104.608 461.3033,104.608 461.3033,95.032 445.3033,101.416" style="fill:rgb(0,128,0);fill-opacity:0.784313725490196;stroke:none;" />
+  <text dominant-baseline="hanging" text-anchor="start" transform="translate(465.3033,108.8)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">Q=(80-100)%</text>
+  <polyline points="445.3033,121.568 461.3033,121.568" style="fill:none;stroke:none;" />
+  <polyline points="461.3033,111.992 445.3033,118.376" style="fill:none;stroke:none;" />
+  <polygon points="445.3033,121.568 461.3033,121.568 461.3033,111.992 445.3033,118.376" style="fill:rgb(255,255,0);fill-opacity:0.784313725490196;stroke:none;" />
+</svg>
