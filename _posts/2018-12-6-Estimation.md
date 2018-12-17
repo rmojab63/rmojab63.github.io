@@ -374,6 +374,21 @@ SlideNext
 
 SlideNext
 
+## A Structure
+- One Variable (e.g., Normal Model)
+- More than One Variable
+  + No Relationship (e.g., Multivariate Normal Model)
+  + Relationship
+    * One variable with others (e.g., Multiple Linear Regression Model)
+    * More than one variable with others (e.g., Multivariate Linear Regression Model)
+- Dynamic
+  + One Variable (e.g., ARIMA)
+  + More than One Variable
+    * One Variable with others (e.g., ARMA with Exogenous Variables)
+    * More than One Variable (e.g. VAR)
+	
+SlideNext
+
 ## Maximum Likelihood Estimator
 - Given the statistical model (observations and the set of univariate normal distributions), MLE selects a member for which the joint probability distribution of the observations is maximized.
 $$
