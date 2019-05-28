@@ -1,4 +1,3 @@
-
 ---
 layout: presentation
 htmllang: en
@@ -339,21 +338,6 @@ SlideNext
   + As implied before, information is valuable.
   + "The best parametric estimator will generally outperform the best semi-parametric estimator." (Greene, 2002, p. 425)
 
-SlideNext
-
-## A Structure
-- One Variable (e.g., Normal Model)
-- More than One Variable
-  + No Relationship (e.g., Multivariate Normal Model)
-  + Relationship
-    * One variable with others (e.g., Multiple Linear Regression Model)
-    * More than one variable with others (e.g., Multivariate Linear Regression Model)
-- Dynamic
-  + One Variable (e.g., ARIMA)
-  + More than One Variable
-    * One Variable with others (e.g., ARMA with Exogenous Variables)
-    * More than One Variable (e.g. VAR)
-	
 SlideNext
 
 ## Maximum Likelihood Estimator
