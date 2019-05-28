@@ -1,3 +1,4 @@
+
 ---
 layout: presentation
 htmllang: en
@@ -9,6 +10,7 @@ heading: Estimation Framework
 # Estimation Frameworks
 
 Ramin Mojab, 2018
+
 
 SlideNext
 
@@ -225,7 +227,17 @@ SlideNext
 
 # Gamma Model
 - Alternatively, you might choose the following set of distributions;
+$$
+\\{\frac{(\frac{\nu}{2\delta})^{\frac{\nu}{2}}}{\Gamma(\frac{\nu}{2})}x^{\frac{\nu-2}{2}}e^{-\frac{\nu x}{2\delta}}
+:~\alpha,\beta\in  \mathbb{R}_{+}\\}
+$$
+- $x>0$
+- mean: $\delta$
+- variance: $\frac{2\delta^2}{\nu}$
 
+SlideNextV
+# Another Parameterization
+- Let $\beta=\frac{\nu}{2\delta}$ and $\alpha=\frac{\nu}{2}$:
 $$
 \\{\frac{\beta^{\alpha}}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta  x}:~\alpha,\beta\in  \mathbb{R}_{+}\\}
 $$
@@ -273,51 +285,6 @@ $$
 f(x)  =  \frac{\beta^{\alpha}}{\Gamma(\alpha)}\frac{1}{x^{\alpha+1}}e^{-\frac{\beta}{x}}
 $$
 - $\beta$ plays the _scale_ role, therefore, its better to use another notation, e.g., $\theta$.
-
-SlideNext
-
-## Another Example
-- Assume that we are interested in a person's debt and income.
-  + Note that it is a two dimentional variable: $(X,Z)$.
-  + whil income is always positive, debt can be negative: $x \in \mathbb{R}, z\in\mathbb{R}_{+}$
-- Consider the following set of distributions:
-$$
-\\{  \frac{\beta^{\alpha}\sqrt{\omega}}{\Gamma(\alpha)\sqrt{2\pi}}  \cdot  e^{-\frac{\omega z}{2}(x-\mu)^2} z^{\alpha-\frac{1}{2}}e^{-\beta z}, \; \mu\in  \mathbb{R},~\omega,\alpha,\beta\in  \mathbb{R}\_{+}
-\\}
-$$
-- This is a normal-gamma model.
-- It has four parameters.
-
-SlideNextV
-
-## Normal-Gamma Distribution
-- It is a joint probability distribution.
-$$
-f(x,z)= \frac{1}{\sqrt{2\pi}\sqrt{\frac{1}{\omega z}}}  e^{-\frac{1}{2}\frac{(x-\mu)^2}{\frac{1}{\omega z}}}   \times \frac{\beta^{\alpha}}{\Gamma(\alpha)}z^{\alpha-1}e^{-\beta  z}
-$$
-- which means it is the product of a conditional normal distrubution and a gamma distribution, i.e., 
-$$
-\begin{cases}
-(X|Z=z) \sim N(\mu,\frac{1}{\omega z})\\\\
-Z \sim G(\alpha,\beta)
-\end{cases}
-$$
-
-SlideNextV
-
-## Mean and Variance
-- $\mathbf{Y}=\begin{pmatrix}
-X\\\\
-Z
-\end{pmatrix}$
-- $E(\mathbf{Y})=\begin{pmatrix}
-\mu\\\\
-\frac{\alpha}{\beta}
-\end{pmatrix}$
-- $var(\mathbf{Y})=\begin{pmatrix}
-\frac{\beta}{\omega(\alpha - 1)} & ? \\\\
-? & \frac{\alpha}{\beta^2} 
-\end{pmatrix}$
 
 SlideNext
 
@@ -483,7 +450,7 @@ SlideNext
 - In this context, we know something _non-data-based_ about the parameters. Assume that they are presented in the following (prior) distribution, i.e., normal-gamma distribution:
 $$
 (\mu,\sigma^{-2})\sim  \text{NG}(\underline{\mu},\underline{\omega},\underline{\alpha},\underline{\beta}),  \quad
-\underline{\mu}\in  \mathbb{R},~\underline{\omega},\underline{\alpha},\underline{\beta}\in  \mathbb{R}\_{+}.
+\underline{\mu}\in  \mathbb{R},~\underline{\omega},\underline{\delta},\underline{\nu}\in  \mathbb{R}\_{+}.
 $$
 - There are four _prior hyperparameters_.
 
@@ -491,7 +458,7 @@ SlideNextV
 
 ## A Prior
 $$
-\sigma^{-2}  \sim  G(\underline{\alpha},  \underline{\beta}),  \quad\mu|  \sigma^2  \sim  N(\underline{\mu},  \underline{\omega}\sigma^2)
+\sigma^{-2}  \sim  G(\underline{\delta},  \underline{\nu}),  \quad\mu|  \sigma^2  \sim  N(\underline{\mu},  \underline{\omega}\sigma^2)
 $$
 - The first distribution is unconditional and therefore calibration is straightforward.
 - The other is conditional, which means, your belief about $\mu$ is not independent from the value of $\sigma^2$.
@@ -519,19 +486,19 @@ SlideNextV
 
 ## The Posterior (continued)
 $$
-P(\mu,\sigma^2|x_1,...,x_N)  \propto  f(x_1,...,x_N|\mu,\sigma^2)\times  NG(\underline{\mu},\underline{\omega},\underline{\alpha},\underline{\beta})
+P(\mu,\sigma^{-2}|x_1,...,x_N)  \propto  f(x_1,...,x_N|\mu,\sigma^2)\times  NG(\underline{\mu},\underline{\omega},\underline{\delta},\underline{\nu})
 $$
 We can show that,
 $$
-(\mu,\sigma^2|x_1,...,x_N)  \sim  NG(\overline{\mu},\overline{\omega},\overline{\alpha},\overline{\beta})
+(\mu,\sigma^{-2}|x_1,...,x_N)  \sim  NG(\overline{\mu},\overline{\omega},\overline{\delta},\overline{\nu})
 $$
 where,
 $$
 \begin{cases}
 \overline{\omega}=(\underline{\omega}^{-1}+N)^{-1}\\\\
 \overline{\mu}=\overline{\omega}(\underline{\omega}^{-1}\underline{\mu}+N\hat{\mu})\\\\
-\overline{\beta}=\underline{\beta}+N\\\\
-\overline{\alpha}=\frac{\underline{\beta}}{\underline{\beta}+N}\underline{\alpha}+\frac{N-1}{\underline{\beta}+N}s^2+\frac{1}{\underline{\beta}+N}(\hat{\mu}-\underline{\mu})^{2}[\underline{\omega}+N^{-1}]^{-1}
+\overline{\nu}=\underline{\nu}+N\\\\
+\overline{\delta}^{-1}=\frac{\underline{\nu}}{\underline{\nu}+N}\underline{\delta}+\frac{N-1}{\underline{\nu}+N}s^2+\frac{1}{\underline{\nu}+N}(\hat{\mu}-\underline{\mu})^{2}[\underline{\omega}+N^{-1}]^{-1}
 \end{cases}
 $$
 SlideNextV
@@ -540,7 +507,7 @@ SlideNextV
 - Large number of observations:
 $$N\rightarrow  \infty  \Rightarrow  \overline{\omega}\rightarrow  0  \Rightarrow  \begin{cases}
 \overline{\mu}=\hat{\mu}\\\\
-\overline{\alpha}=s^2
+\overline{\delta}=s^{-2}
 \end{cases}
 $$
 - High prior uncertainty: $\underline{\omega}  \rightarrow  \infty  \Rightarrow  \overline{\mu}=\hat{\mu}$
@@ -553,7 +520,9 @@ SlideNextV
 - A natural choice is the mean of the posterior distribution.
   + It minimizes the _mean square error_, (therefore the name, _minimum MSE estimator_).
 - mode, median, and other quantiles have their own optimization logic.
+
 SlideNextV
+
 ## Properties
 - Loosely speaking, for large $N$, P(D|A) (i.e., the likelihood) is the dominant part of the posterior distribution.
 - The posterior is asymptotically normally distributed, and minimum MSE estimator is the same as MLE.
@@ -686,7 +655,7 @@ SlideNextV
 
 $$
 \begin{cases}
-\sigma^{-2}  \sim  G(\underline{\alpha},  \underline{\beta}),\\\\
+\sigma^{-2}  \sim  G(\underline{\delta},  \underline{\nu}),\\\\
 \boldsymbol{\mu}|  \sigma^2  \sim  N(\underline{\boldsymbol{\mu}},  \underline{\boldsymbol{\Omega}}\sigma^2)
 \end{cases}
 $$
@@ -702,15 +671,15 @@ SlideNextV
 ## Posterior
 
 $$
-(\boldsymbol{\mu}',\sigma^2|x_1,...,x_N)  \sim  \text{NG}(\overline{\boldsymbol{\mu}},\overline{\boldsymbol{\Omega}},\overline{\alpha},\overline{\beta})
+(\boldsymbol{\mu}',\sigma^{-2}|x_1,...,x_N)  \sim  \text{NG}(\overline{\boldsymbol{\mu}},\overline{\boldsymbol{\Omega}},\overline{\delta},\overline{\nu})
 $$
 - where:
 $$
 \begin{cases}
 \overline{\boldsymbol{\Omega}}=(\underline{\boldsymbol{\Omega}}^{-1}+\mathbf{X'X})^{-1}\\\\
 \overline{\boldsymbol{\mu}}=\overline{\boldsymbol{\Omega}}(\underline{\boldsymbol{\Omega}}^{-1}\underline{\boldsymbol{\mu}}+\mathbf{X'X}\hat{\boldsymbol{\mu}})\\\\
-\overline{\beta}=\underline{\beta}+N\\\\
-\overline{\alpha}=\frac{\underline{\beta}}{\underline{\beta}+N}\underline{\alpha}+\frac{N-1}{\underline{\beta}+N}s^2+\frac{1}{\underline{\beta}+N}(\hat{\boldsymbol{\mu}}-\underline{\boldsymbol{\mu}})[\underline{\boldsymbol{\Omega}}+(\mathbf{X'X})^{-1}]^{-1}(\hat{\boldsymbol{\mu}}-\underline{\boldsymbol{\mu}})'
+\overline{\nu}=\underline{\nu}+N\\\\
+\overline{\delta}^{-1}=\frac{\underline{\nu}}{\underline{\nu}+N}\underline{\delta}+\frac{N-1}{\underline{\nu}+N}s^2+\frac{1}{\underline{\nu}+N}(\hat{\boldsymbol{\mu}}-\underline{\boldsymbol{\mu}})[\underline{\boldsymbol{\Omega}}+(\mathbf{X'X})^{-1}]^{-1}(\hat{\boldsymbol{\mu}}-\underline{\boldsymbol{\mu}})'
 \end{cases}
 $$
 
@@ -724,7 +693,7 @@ $$
 - Large number of observations:
 $$N\rightarrow  \infty  \Rightarrow  \mathbf{X'X}  \rightarrow  [\infty]  \Rightarrow  \overline{\boldsymbol{\Omega}}\rightarrow  \mathbf{0}  \Rightarrow  \begin{cases}
 \overline{\boldsymbol{\mu}}=\hat{\boldsymbol{\mu}}\\\\
-\overline{\alpha}=s^2
+\overline{\delta}=s^{-2}
 \end{cases}
 $$
 - High prior uncertainty:
@@ -803,7 +772,7 @@ SlideNext
 ## Bayes Estimator (Continued)
 - Recall the prior for variance in a single equation model:
 $$ 
-\sigma^{-2}  \sim  G(\underline{\alpha},  \underline{\beta}) 
+\sigma^{-2}  \sim  G(\underline{\delta},  \underline{\nu}) 
 $$
 - In a multivariate model, we are dealing with a matrix of covariances
   + We need a new type of prior
@@ -814,13 +783,13 @@ SlideNextV
 
 ## Wishart Distribution
 $$
-f(\mathbf{X})=\frac{|\mathbf{X}|^{\frac{v-m-1}{2}}e^{\frac{-tr(\mathbf{S}^{-1}\mathbf{X})}{2}}}{2^{\frac{vm}{2}}|\mathbf{S}|^{\frac{v}{2}}\Gamma_{m}(\frac{v}{2})}, \; \mathbf{S}\in\mathbb{R}^{m\times m} (p.d.), v\in \mathbb{R}, v>m-1
+f(\mathbf{X})=\frac{|\mathbf{X}|^{\frac{\nu-m-1}{2}}e^{\frac{-tr(\boldsymbol{\Delta}^{-1}\mathbf{X})}{2}}}{2^{\frac{\nu m}{2}}|\boldsymbol{\Delta}|^{\frac{\nu}{2}}\Gamma_{m}(\frac{\nu}{2})}, \; \boldsymbol{\Delta}\in\mathbb{R}^{m\times m} (p.d.), v\in \mathbb{R}, \nu>m-1
 $$
 - $\Gamma_{m}$ is multivariate gamma function.
 - $tr$ is trace operator.
-- $E(\mathbf{X})=v\mathbf{S}$
-- $var(\mathbf{X}\_{ij})=v(s\_{ij}^{2}+s\_{ii}s\_{jj})$
-- notation: $\mathbf{W}(\mathbf{S},v)$
+- $E(\mathbf{X})=\nu\boldsymbol{\Delta}$
+- $var(\mathbf{X}\_{ij})=\nu(\delta\_{ij}^{2}+\delta\_{ii}\delta\_{jj})$
+- notation: $\mathbf{W}(\boldsymbol{\Delta},\nu)$
 
 SlideNextV
 
@@ -831,7 +800,7 @@ $$
 - in which
 $$
 \begin{cases}
-\boldsymbol{\Sigma}^{-1}\sim \mathbf{W}(\underline{\mathbf{S}},\underline{v})\\\\
+\boldsymbol{\Sigma}^{-1}\sim \mathbf{W}(\underline{\boldsymbol{\Delta}},\underline{v})\\\\
 \boldsymbol{\mu}|\boldsymbol{\Sigma}  \sim  \mathbf{N}(\underline{\boldsymbol{\mu}},  \boldsymbol{\Sigma}\otimes\underline{\boldsymbol{\Omega}}) 
 \end{cases}
 $$
@@ -840,7 +809,7 @@ SlideNextV
 ## The Posterior
 - Compared with the single equation case, $\overline{\mathbf{S}}$ is different:
 $$
-\overline{\mathbf{S}}=\underline{\mathbf{S}}+\hat{\boldsymbol{\Sigma}}_N+(\hat{\boldsymbol{\mu}}-\underline{\boldsymbol{\mu}})[\underline{\boldsymbol{\Omega}}+(\mathbf{X'X})^{-1}]^{-1}(\hat{\boldsymbol{\mu}}-\underline{\boldsymbol{\mu}})'
+\overline{\boldsymbol{\Delta}}=\underline{\boldsymbol{\Delta}}+\hat{\boldsymbol{\Sigma}}_N+(\hat{\boldsymbol{\mu}}-\underline{\boldsymbol{\mu}})[\underline{\boldsymbol{\Omega}}+(\mathbf{X'X})^{-1}]^{-1}(\hat{\boldsymbol{\mu}}-\underline{\boldsymbol{\mu}})'
 $$
 
 SlideNext
@@ -913,15 +882,16 @@ SlideNextV
 $$
 \begin{cases}
 \boldsymbol{\mu}|\boldsymbol{\Sigma},\mathbf{I} \sim  \mathbf{N}(\overline{\boldsymbol{\mu}},  \overline{\boldsymbol{\Psi}})\\\\
-\boldsymbol{\Sigma}^{-1}|\boldsymbol{\mu},\mathbf{I}\sim \mathbf{W}(\overline{\mathbf{S}},\overline{v})
+\boldsymbol{\Sigma}^{-1}|\boldsymbol{\mu},\mathbf{I}\sim \mathbf{W}(\overline{\boldsymbol{\Delta}},\overline{v})
 \end{cases}
 $$
+
 $$
 \begin{cases}
 \overline{\boldsymbol{\Psi}}=(\underline{\boldsymbol{\Psi}}^{-1}+(\boldsymbol{\Sigma}^{-1}\otimes\mathbf{X'X}))^{-1}\\\\
 \overline{\boldsymbol{\mu}}=\overline{\boldsymbol{\Psi}}(\underline{\boldsymbol{\Psi}}^{-1}\underline{\boldsymbol{\mu}}+(\boldsymbol{\Sigma}^{-1}\otimes\mathbf{X'X})\hat{\boldsymbol{\mu}})\\\\
-\overline{v}=\underline{v}+N\\\\
-\overline{\mathbf{S}}=\underline{\mathbf{S}}+\hat{\mathbf{S}}_N+(\hat{\boldsymbol{\mu}}-\boldsymbol{\mu})\mathbf{X'X}(\hat{\boldsymbol{\mu}}-\boldsymbol{\mu})'
+\overline{\nu}=\underline{\nu}+N\\\\
+\overline{\boldsymbol{\Delta}}^{-1}=\underline{\boldsymbol{\Delta}}+\hat{\boldsymbol{\Sigma}}_N+(\hat{\boldsymbol{\mu}}-\boldsymbol{\mu})\mathbf{X'X}(\hat{\boldsymbol{\mu}}-\boldsymbol{\mu})'
 \end{cases}
 $$
  
@@ -1033,7 +1003,7 @@ SlideNext
 $$
 \begin{cases}
 \boldsymbol{\mu} \sim  \mathbf{N}(\underline{\boldsymbol{\mu}},  \underline{\boldsymbol{\Psi}})\\\\
-\boldsymbol{\Sigma}^{-1}\sim \mathbf{W}(\underline{\mathbf{S}},\underline{v})
+\boldsymbol{\Sigma}^{-1}\sim \mathbf{W}(\underline{\boldsymbol{\Delta}},\underline{v})
 \end{cases}
 $$
 - recall the $i$-th equation in a VAR model:
