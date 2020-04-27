@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 ---
 
 {% assign postsByYear = site.posts | where: "htmllang", "fa" | group_by_exp:"post", "post.year" %}
@@ -14,9 +14,11 @@ layout: page
 </h3>
 <div dir="rtl">
 <ul style="margin-right: 20px;">
-        {% for post in month.items %}
-<li> <a href="{{ post.url }}" >{{ post.heading }}</a> </li>
-        {% endfor %}
+{% for post in month.items %}
+<li><div> <a style="font-weight:bold" href="{{ post.url }}" >{{ post.heading }}</a> 
+<p>
+{{ post.content | newline_to_br | strip_newlines | split: '<br />' | first | strip_html | append: " [. . .]" }}</p></div></li>
+{% endfor %}
 </ul>
 </div>
     {% endfor %}

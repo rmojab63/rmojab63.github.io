@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 ---
 
 {% assign postsByYear = site.posts | where: "htmllang", "en" | group_by_exp:"post", "post.date | date: '%Y'" %}

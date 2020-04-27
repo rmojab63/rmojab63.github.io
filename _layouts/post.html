@@ -1,32 +1,64 @@
 ---
 layout: default
-htmllang: en
-htmldir: ltr
+htmllang: fa
+htmldir: rtl
 usediv: auto
-author: Ramin Mojab
+author: رامین مجاب
 ---
 <div>
 
-
-{% if page.usediv != 'auto' and page.usediv != 'ltr' and page.usediv != 'rtl' %}
-<h1> {{ page.heading }} </h1>
-<p style="color:blue;margin-bottom:2cm"> {{ page.author }} </p>
-{{ page.content }}
-{% else %}
 <div dir="{{ page.usediv }}"> 
-<h1> {{ page.heading }} </h1>
-<p dir="{{ page.usediv }}" style="color:blue;margin-bottom:2cm"> {{ page.author }} </p>
+<h1 style="text-align:center;"> {{ page.heading }} </h1>
+<p dir="{{ page.usediv }}">
+  نویسنده: 
+  <span style="color:green;font-weight:bold"> {{ page.author }} </span>  
+</p>
+
+{% if page.image %}
+<img src="{{ page.image }}" alt="image" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+{% endif %}
+
+{% assign read_time1 = page.content | number_of_words | divided_by: 150 %}
+{% assign read_time2 = page.content | number_of_words | divided_by: 250 %}
+{% if read_time1 < 1 %}
+   {% assign read_time = "کمتر از یک" %}
+{% elsif read_time1 == read_time2 %}
+    {% assign read_time = read_time1 %}
+{% else %}
+   {% assign read_time = read_time2 | append: " تا " | append: read_time1 %}
+{% endif %}
+
+<p dir="{{ page.usediv }}">
+  مدت‌زمان مطالعه:
+  <span style="color:green;font-weight:bold"> {{ read_time }} </span>
+  <span style="color:green;font-weight:bold"> دقیقه </span>
+</p>
+
+<hr/>
+
 </div>
 {% assign paragraphs = page.content | newline_to_br | strip_newlines | split: '<br />' %}
 {% for p in paragraphs %}
+{% if  p contains "insertimage1" %}
+   <img src="{{ page.image1 }}" alt="image 1" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+{% elsif p contains "insertimage2" %}
+  <img src="{{ page.image2 }}" alt="image 2" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+{% elsif p contains "insertimage3" %}
+  <img src="{{ page.image3 }}" alt="image 3" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+{% elsif p contains "insertimage4" %}
+  <img src="{{ page.image4 }}" alt="image 4" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+{% elsif p contains "insertimage5" %}
+  <img src="{{ page.image5 }}" alt="image 5" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+{% else %}
 <div dir="{{ page.usediv }}"> 
 {{ p }}
 </div>
-{% endfor %}
 {% endif %}
+{% endfor %}
 
 {% if page.twitterlink %}
-<div style="text-align:center;margin-top:2cm">
+<hr/>
+<div style="text-align:center;margin:1cm">
 <a href="{{ page.twitterlink }}" title="Discuss on Twitter">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" > 
  <path style="fill:blue;fill-opacity:1;" d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path> 
@@ -34,3 +66,11 @@ author: Ramin Mojab
 </a>
 </div>
 {% endif %}
+
+<hr/>
+<p dir="{{ page.usediv }}">
+  تاریخ نگارش: 
+  <span style="color:green;font-weight:bold"> {{ page.month }} </span>  
+  <span style="color:green;font-weight:bold"> {{ page.year }} </span>
+  <span style="color:green;font-weight:bold;font-size:small"> ({{ page.date | date: "%B %d %Y" }}) </span>
+</p>
