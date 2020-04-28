@@ -1,5 +1,6 @@
 ---
 layout: default
+posttype: 1
 htmllang: fa
 htmldir: rtl
 usediv: auto
@@ -9,9 +10,18 @@ author: رامین مجاب
 
 <div dir="{{ page.usediv }}"> 
 <h1 style="text-align:center;"> {{ page.heading }} </h1>
-<p dir="{{ page.usediv }}">
+<p dir="{{ page.usediv }}" style="margin:0">
   نویسنده: 
   <span style="color:green;font-weight:bold"> {{ page.author }} </span>  
+</p>
+<p dir="{{ page.usediv }}" title="{{ page.date | date: "%d %B %Y" }}" style="margin:0">
+  تاریخ نگارش: 
+  {% if page.month%}
+  <span style="color:green;font-weight:bold"> {{ page.month }} </span>  
+  {% else %}
+   <span style="color:green;font-weight:bold"> {{ page.season }} </span>  
+  {% endif %}
+  <span style="color:green;font-weight:bold"> {{ page.year }} </span>
 </p>
 
 {% if page.image %}
@@ -28,7 +38,7 @@ author: رامین مجاب
    {% assign read_time = read_time2 | append: " تا " | append: read_time1 %}
 {% endif %}
 
-<p dir="{{ page.usediv }}">
+<p dir="{{ page.usediv }}" style="margin-bottom:1cm;margin-top:0">
   مدت‌زمان مطالعه:
   <span style="color:green;font-weight:bold"> {{ read_time }} </span>
   <span style="color:green;font-weight:bold"> دقیقه </span>
@@ -40,15 +50,15 @@ author: رامین مجاب
 {% assign paragraphs = page.content | newline_to_br | strip_newlines | split: '<br />' %}
 {% for p in paragraphs %}
 {% if  p contains "insertimage1" %}
-   <img src="{{ page.image1 }}" alt="image 1" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+   <img src="{{ page.image1 }}" alt="image 1" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
 {% elsif p contains "insertimage2" %}
-  <img src="{{ page.image2 }}" alt="image 2" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+  <img src="{{ page.image2 }}" alt="image 2" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
 {% elsif p contains "insertimage3" %}
-  <img src="{{ page.image3 }}" alt="image 3" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+  <img src="{{ page.image3 }}" alt="image 3" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
 {% elsif p contains "insertimage4" %}
-  <img src="{{ page.image4 }}" alt="image 4" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+  <img src="{{ page.image4 }}" alt="image 4" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
 {% elsif p contains "insertimage5" %}
-  <img src="{{ page.image5 }}" alt="image 5" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+  <img src="{{ page.image5 }}" alt="image 5" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
 {% else %}
 <div dir="{{ page.usediv }}"> 
 {{ p }}
@@ -67,10 +77,10 @@ author: رامین مجاب
 </div>
 {% endif %}
 
+{% if page.publishlink %}
 <hr/>
 <p dir="{{ page.usediv }}">
-  تاریخ نگارش: 
-  <span style="color:green;font-weight:bold"> {{ page.month }} </span>  
-  <span style="color:green;font-weight:bold"> {{ page.year }} </span>
-  <span style="color:green;font-weight:bold;font-size:small"> ({{ page.date | date: "%B %d %Y" }}) </span>
+  منتشرشده در: 
+  <a style="color:green;font-weight:bold" href="{{ page.publishlink }}" dir="ltr"> {{ page.publishlink }} </span>
 </p>
+{% endif %}
