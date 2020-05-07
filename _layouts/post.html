@@ -28,8 +28,9 @@ author: رامین مجاب
 <img src="{{ page.image }}" alt="image" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
 {% endif %}
 
-{% assign read_time1 = page.content | number_of_words | divided_by: 150 %}
-{% assign read_time2 = page.content | number_of_words | divided_by: 250 %}
+{% assign nw = page.content | number_of_words %}
+{% assign read_time1 = nw | divided_by: 150.0 | round %}
+{% assign read_time2 = nw | divided_by: 250.0 | round %}
 {% if read_time2 < 1 %}
    {% assign read_time = "کمتر از یک" %}
 {% elsif read_time1 == read_time2 %}
@@ -38,7 +39,7 @@ author: رامین مجاب
    {% assign read_time = read_time2 | append: " تا " | append: read_time1 %}
 {% endif %}
 
-<p dir="{{ page.usediv }}" style="margin-bottom:1cm;margin-top:0">
+<p dir="{{ page.usediv }}" style="margin-bottom:1cm;margin-top:0" title="با فرض خواندن ۱۵۰ تا ۲۵۰ کلمه در دقیقه (تعداد کلمات: {{ nw }})">
   مدت‌زمان مطالعه:
   <span style="color:green;font-weight:bold"> {{ read_time }} </span>
   <span style="color:green;font-weight:bold"> دقیقه </span>
@@ -84,3 +85,8 @@ author: رامین مجاب
   <a style="color:green;font-weight:bold" href="{{ page.publishlink }}" dir="ltr"> {{ page.publishlink }} </span>
 </p>
 {% endif %}
+
+<hr/>
+<p dir="{{ page.usediv }}" style="text-align:center;font-size:small;margin:0.5cm">
+«تمامی حقوق محفوظ است»
+</p>
