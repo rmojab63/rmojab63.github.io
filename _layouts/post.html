@@ -9,23 +9,42 @@ author: رامین مجاب
 <div>
 
 <div dir="{{ page.usediv }}"> 
+
 <h1 style="text-align:center;"> {{ page.heading }} </h1>
+
 <p dir="{{ page.usediv }}" style="margin:0">
-  نویسنده: 
+&#9998; نویسنده: 
   <span style="color:green;font-weight:bold"> {{ page.author }} </span>  
 </p>
 <p dir="{{ page.usediv }}" title="{{ page.date | date: "%d %B %Y" }}" style="margin:0">
-  تاریخ نگارش: 
+&#128197; تاریخ نگارش: 
   {% if page.month%}
-  <span style="color:green;font-weight:bold"> {{ page.month }} </span>  
-  {% else %}
-   <span style="color:green;font-weight:bold"> {{ page.season }} </span>  
+  <span style="color:green;font-weight:bold"> {{ page.month }} {{ page.year }} </span>
+  {% elsif page.season %}
+   <span style="color:green;font-weight:bold"> {{ page.season }} {{ page.year }} </span>  
+   {% else %}
+    <span style="color:green;font-weight:bold"> {{ page.date | date: "%d %B %Y" }} </span>  
   {% endif %}
-  <span style="color:green;font-weight:bold"> {{ page.year }} </span>
 </p>
 
 {% if page.image %}
-<img src="{{ page.image }}" alt="image" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+<img src="{{ page.image }}" alt="image" style="display:block;margin-left:auto;margin-right:auto;width:80%;">
+{% endif %}
+{% if page.googlesearchbtn %}
+<div dir="{{ page.usediv }}">
+<a href="https://www.google.com/search?q={{ page.googlesearchbtn }}" title="Click to search google for '{{ page.googlesearchbtn }}'">
+<div style="margin-right:0pt">
+<svg width="16" height="16" viewBox="0 0 256 262" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4"/><path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853"/><path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05"/><path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335"/></svg>
+<span style="margin-right:2pt">جستجوی اطلاعات در گوگل</span>
+</div>
+</a> 
+</div>
+{% endif %}
+{% if page.spoileralert == "T" %}
+<div style="text-align:center">
+<span style="color:red;">
+&#9888; هشدار افشای محتوا</span>
+</div>
 {% endif %}
 
 {% assign nw = page.content | number_of_words %}
@@ -40,7 +59,7 @@ author: رامین مجاب
 {% endif %}
 
 <p dir="{{ page.usediv }}" style="margin-bottom:1cm;margin-top:0" title="با فرض خواندن ۱۵۰ تا ۲۵۰ کلمه در دقیقه (تعداد کلمات: {{ nw }})">
-  مدت‌زمان مطالعه:
+&#x1F551; مدت‌زمان مطالعه:
   <span style="color:green;font-weight:bold"> {{ read_time }} </span>
   <span style="color:green;font-weight:bold"> دقیقه </span>
 </p>
@@ -66,6 +85,7 @@ author: رامین مجاب
 </div>
 {% endif %}
 {% endfor %}
+
 
 {% if page.twitterlink %}
 <hr/>

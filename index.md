@@ -10,3 +10,5 @@ I am a research assistant in Economics at Monetary and Banking Research Institut
 What you should expect:
 
 ![words](/assets/svgs/words.svg)
+
+*  [کامنت‌ها](/pages/comments.html)
