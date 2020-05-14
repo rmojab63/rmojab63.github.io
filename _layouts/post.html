@@ -55,6 +55,13 @@ author: رامین مجاب
 </a> 
 </div>
 {% endif %}
+{% if page.publishlink %}
+{% assign lp = page.publishlink | split : "/" %}
+<p dir="rtl">
+&#9413; منتشرشده در: 
+  <a style="color:green;font-weight:bold" href="{{ page.publishlink }}" dir="ltr"> {{ lp[2] }} </a></span>
+</p>
+{% endif %}
 
 <hr/>
 
@@ -94,14 +101,6 @@ author: رامین مجاب
 </svg>
 </a>
 </div>
-{% endif %}
-
-{% if page.publishlink %}
-<hr/>
-<p dir="{{ page.usediv }}">
-  منتشرشده در: 
-  <a style="color:green;font-weight:bold" href="{{ page.publishlink }}" dir="ltr"> {{ page.publishlink }} </span>
-</p>
 {% endif %}
 
 <hr/>
