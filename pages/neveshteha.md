@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+ 
 {% assign postsByYear = site.posts | where: "posttype", "1" | where: "htmllang", "fa" | group_by_exp:"post", "post.year" %}
 {% for year in postsByYear %}
 <h2 dir="rtl">

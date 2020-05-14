@@ -16,15 +16,104 @@ author: رامین مجاب
 &#9998; نویسنده: 
   <span style="color:green;font-weight:bold"> {{ page.author }} </span>  
 </p>
-<p dir="{{ page.usediv }}" title="{{ page.date | date: "%d %B %Y" }}" style="margin:0">
+
+<!-- Translated from: https://jdf.scr.ir/jdf/?t=c_sharp -->
+
+{% assign gd = page.date | date: "%-d" | plus: 0 %}
+{% assign gm = page.date | date: "%-m" | plus: 0 %}
+{% assign gy = page.date | date: "%-Y" | plus: 0 %}
+{% assign gdm = "0,31,59,90,120,151,181,212,243,273,304,334" | split: ',' %}
+{% assign gy2 = gy %}
+{% if gm > 2 %}
+  {% assign gy2 = gy |plus: 1 %}
+{% endif %}
+
+{% assign days = gy | times: 365 | plus: 355666 %}
+{% assign days = gy2 | plus: 3 | divided_by: 4 | floor | plus: days %}
+{% assign temp1 = gy2 | plus: 99 | divided_by: 100 | floor %}
+{% assign days = days | minus: temp1 %}
+{% assign days = gy2 | plus: 399 | divided_by: 400 | floor | plus: days | plus: gd%}
+{% assign gm1 = gm | minus: 1 %}
+{% assign days = days | plus: gdm[gm1] %}
+
+{% assign jy = days | divided_by: 12053 | floor | times: 33 | minus: 1595 %}
+{% assign days = days | modulo: 12053 %}
+{% assign jy = days | divided_by: 1461 | floor | times: 4 | plus: jy %}
+
+{% assign days = days | modulo: 1461 %}
+{% if days > 365 %}
+    {% assign temp1 = days | minus: 1 %}
+	{% assign temp2 = temp1 | divided_by: 365 | floor %}
+	{% assign jy = jy | plus: temp2 %}
+	{% assign days = temp1 | modulo: 365 %}
+{% endif %}
+
+{% if days < 186 %}
+	{% assign jm = days | divided_by: 31 | floor | plus: 1 %}
+	{% assign jd = days | modulo: 31 | plus: 1 %}
+{% else %}
+	{% assign jm = days | minus: 186 | divided_by: 30 | floor | plus: 7%}
+	{% assign jd = days | minus: 186 | modulo: 30 | plus: 1 %}
+{% endif %}
+{% case jm %}
+  {% when 1 %}
+     {% assign jmn = "فروردین" %}
+  {% when 2 %}
+     {% assign jmn = "اردیبهشت" %}
+  {% when 3 %}
+     {% assign jmn = "خرداد" %}
+  {% when 4 %}
+     {% assign jmn = "تیر" %}
+  {% when 5 %}
+     {% assign jmn = "مرداد" %}
+  {% when 6 %}
+     {% assign jmn = "شهریور" %}
+  {% when 7 %}
+     {% assign jmn = "مهر" %}
+  {% when 8 %}
+     {% assign jmn = "آبان" %}
+  {% when 9 %}
+     {% assign jmn = "آذر" %}
+  {% when 10 %}
+     {% assign jmn = "دی" %}
+  {% when 11 %}
+     {% assign jmn = "بهمن" %}
+  {% when 12 %}
+     {% assign jmn = "اسفند" %}
+{% endcase %}
+{% case jm %}
+  {% when 1 %}
+     {% assign js = "بهار" %}
+  {% when 2 %}
+     {% assign js = "بهار" %}
+  {% when 3 %}
+     {% assign js = "بهار" %}
+  {% when 4 %}
+     {% assign js = "تابستان" %}
+  {% when 5 %}
+     {% assign js = "تابستان" %}
+  {% when 6 %}
+     {% assign js = "تابستان" %}
+  {% when 7 %}
+     {% assign js = "پاییز" %}
+  {% when 8 %}
+     {% assign js = "پاییز" %}
+  {% when 9 %}
+     {% assign js = "پاییز" %}
+  {% when 10 %}
+     {% assign js = "زمستان" %}
+  {% when 11 %}
+     {% assign js = "زمستان" %}
+  {% when 12 %}
+     {% assign js = "زمستان" %}
+{% endcase %}
+
+{% assign jyp = jy | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
+{% assign jdp = jd | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
+
+<p dir="{{ page.usediv }}" style="margin:0">
 &#128197; تاریخ نگارش: 
-  {% if page.month%}
-  <span style="color:green;font-weight:bold"> {{ page.month }} {{ page.year }} </span>
-  {% elsif page.season %}
-   <span style="color:green;font-weight:bold"> {{ page.season }} {{ page.year }} </span>  
-   {% else %}
-    <span style="color:green;font-weight:bold"> {{ page.date | date: "%d %B %Y" }} </span>  
-  {% endif %}
+  <span style="color:green;font-weight:bold"> {{ jdp }} {{ jmn }} {{ jyp }} </span>
 </p>
 
 {% if page.image %}
@@ -41,8 +130,10 @@ author: رامین مجاب
 {% else %}
    {% assign read_time = read_time2 | append: " تا " | append: read_time1 %}
 {% endif %}
+{% assign read_time = read_time | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
+{% assign nwp = nw | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
 
-<p dir="{{ page.usediv }}" style="margin-bottom:1cm;margin-top:0" title="با فرض خواندن ۱۵۰ تا ۲۵۰ کلمه در دقیقه (تعداد کلمات: {{ nw }})">
+<p dir="{{ page.usediv }}" style="margin-bottom:1cm;margin-top:0" title="با فرض خواندن ۱۵۰ تا ۲۵۰ کلمه در دقیقه (تعداد کلمات: {{ nwp }})">
 &#x1F551; مدت‌زمان مطالعه:
   <span style="color:green;font-weight:bold"> {{ read_time }} </span>
   <span style="color:green;font-weight:bold"> دقیقه </span>
