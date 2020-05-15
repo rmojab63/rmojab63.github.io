@@ -6,195 +6,198 @@ htmldir: rtl
 usediv: auto
 author: رامین مجاب
 ---
-<div>
 
-<div dir="{{ page.usediv }}"> 
+    <div id="aheaderinfo" dir="{{ page.usediv }}">
 
-<h1 style="text-align:center;"> {{ page.heading }} </h1>
+        <h1 style="text-align:center;"> <span id="atitle">{{ page.heading }}</span></h1>
 
-<p dir="{{ page.usediv }}" style="margin:0">
-&#9998; نویسنده: 
-  <span style="color:green;font-weight:bold"> {{ page.author }} </span>  
-</p>
+        <p dir="{{ page.usediv }}" style="margin:0">
+            &#9998; نویسنده:
+            <span id="aauthor" style="color:green;font-weight:bold"> {{ page.author }} </span>
+        </p>
 
-<!-- Translated from: https://jdf.scr.ir/jdf/?t=c_sharp -->
+        <!-- Translated from: https://jdf.scr.ir/jdf/?t=c_sharp -->
+        {% assign gd = page.date | date: "%-d" | plus: 0 %}
+        {% assign gm = page.date | date: "%-m" | plus: 0 %}
+        {% assign gy = page.date | date: "%-Y" | plus: 0 %}
+        {% assign gdm = "0,31,59,90,120,151,181,212,243,273,304,334" | split: ',' %}
+        {% assign gy2 = gy %}
+        {% if gm > 2 %}
+        {% assign gy2 = gy |plus: 1 %}
+        {% endif %}
 
-{% assign gd = page.date | date: "%-d" | plus: 0 %}
-{% assign gm = page.date | date: "%-m" | plus: 0 %}
-{% assign gy = page.date | date: "%-Y" | plus: 0 %}
-{% assign gdm = "0,31,59,90,120,151,181,212,243,273,304,334" | split: ',' %}
-{% assign gy2 = gy %}
-{% if gm > 2 %}
-  {% assign gy2 = gy |plus: 1 %}
-{% endif %}
+        {% assign days = gy | times: 365 | plus: 355666 %}
+        {% assign days = gy2 | plus: 3 | divided_by: 4 | floor | plus: days %}
+        {% assign temp1 = gy2 | plus: 99 | divided_by: 100 | floor %}
+        {% assign days = days | minus: temp1 %}
+        {% assign days = gy2 | plus: 399 | divided_by: 400 | floor | plus: days | plus: gd%}
+        {% assign gm1 = gm | minus: 1 %}
+        {% assign days = days | plus: gdm[gm1] %}
 
-{% assign days = gy | times: 365 | plus: 355666 %}
-{% assign days = gy2 | plus: 3 | divided_by: 4 | floor | plus: days %}
-{% assign temp1 = gy2 | plus: 99 | divided_by: 100 | floor %}
-{% assign days = days | minus: temp1 %}
-{% assign days = gy2 | plus: 399 | divided_by: 400 | floor | plus: days | plus: gd%}
-{% assign gm1 = gm | minus: 1 %}
-{% assign days = days | plus: gdm[gm1] %}
+        {% assign jy = days | divided_by: 12053 | floor | times: 33 | minus: 1595 %}
+        {% assign days = days | modulo: 12053 %}
+        {% assign jy = days | divided_by: 1461 | floor | times: 4 | plus: jy %}
 
-{% assign jy = days | divided_by: 12053 | floor | times: 33 | minus: 1595 %}
-{% assign days = days | modulo: 12053 %}
-{% assign jy = days | divided_by: 1461 | floor | times: 4 | plus: jy %}
+        {% assign days = days | modulo: 1461 %}
+        {% if days > 365 %}
+        {% assign temp1 = days | minus: 1 %}
+        {% assign temp2 = temp1 | divided_by: 365 | floor %}
+        {% assign jy = jy | plus: temp2 %}
+        {% assign days = temp1 | modulo: 365 %}
+        {% endif %}
 
-{% assign days = days | modulo: 1461 %}
-{% if days > 365 %}
-    {% assign temp1 = days | minus: 1 %}
-	{% assign temp2 = temp1 | divided_by: 365 | floor %}
-	{% assign jy = jy | plus: temp2 %}
-	{% assign days = temp1 | modulo: 365 %}
-{% endif %}
+        {% if days < 186 %}
+        {% assign jm = days | divided_by: 31 | floor | plus: 1 %}
+        {% assign jd = days | modulo: 31 | plus: 1 %}
+        {% else %}
+        {% assign jm = days | minus: 186 | divided_by: 30 | floor | plus: 7%}
+        {% assign jd = days | minus: 186 | modulo: 30 | plus: 1 %}
+        {% endif %}
+        {% case jm %}
+        {% when 1 %}
+        {% assign jmn = "فروردین" %}
+        {% when 2 %}
+        {% assign jmn = "اردیبهشت" %}
+        {% when 3 %}
+        {% assign jmn = "خرداد" %}
+        {% when 4 %}
+        {% assign jmn = "تیر" %}
+        {% when 5 %}
+        {% assign jmn = "مرداد" %}
+        {% when 6 %}
+        {% assign jmn = "شهریور" %}
+        {% when 7 %}
+        {% assign jmn = "مهر" %}
+        {% when 8 %}
+        {% assign jmn = "آبان" %}
+        {% when 9 %}
+        {% assign jmn = "آذر" %}
+        {% when 10 %}
+        {% assign jmn = "دی" %}
+        {% when 11 %}
+        {% assign jmn = "بهمن" %}
+        {% when 12 %}
+        {% assign jmn = "اسفند" %}
+        {% endcase %}
+        {% case jm %}
+        {% when 1 %}
+        {% assign js = "بهار" %}
+        {% when 2 %}
+        {% assign js = "بهار" %}
+        {% when 3 %}
+        {% assign js = "بهار" %}
+        {% when 4 %}
+        {% assign js = "تابستان" %}
+        {% when 5 %}
+        {% assign js = "تابستان" %}
+        {% when 6 %}
+        {% assign js = "تابستان" %}
+        {% when 7 %}
+        {% assign js = "پاییز" %}
+        {% when 8 %}
+        {% assign js = "پاییز" %}
+        {% when 9 %}
+        {% assign js = "پاییز" %}
+        {% when 10 %}
+        {% assign js = "زمستان" %}
+        {% when 11 %}
+        {% assign js = "زمستان" %}
+        {% when 12 %}
+        {% assign js = "زمستان" %}
+        {% endcase %}
 
-{% if days < 186 %}
-	{% assign jm = days | divided_by: 31 | floor | plus: 1 %}
-	{% assign jd = days | modulo: 31 | plus: 1 %}
-{% else %}
-	{% assign jm = days | minus: 186 | divided_by: 30 | floor | plus: 7%}
-	{% assign jd = days | minus: 186 | modulo: 30 | plus: 1 %}
-{% endif %}
-{% case jm %}
-  {% when 1 %}
-     {% assign jmn = "فروردین" %}
-  {% when 2 %}
-     {% assign jmn = "اردیبهشت" %}
-  {% when 3 %}
-     {% assign jmn = "خرداد" %}
-  {% when 4 %}
-     {% assign jmn = "تیر" %}
-  {% when 5 %}
-     {% assign jmn = "مرداد" %}
-  {% when 6 %}
-     {% assign jmn = "شهریور" %}
-  {% when 7 %}
-     {% assign jmn = "مهر" %}
-  {% when 8 %}
-     {% assign jmn = "آبان" %}
-  {% when 9 %}
-     {% assign jmn = "آذر" %}
-  {% when 10 %}
-     {% assign jmn = "دی" %}
-  {% when 11 %}
-     {% assign jmn = "بهمن" %}
-  {% when 12 %}
-     {% assign jmn = "اسفند" %}
-{% endcase %}
-{% case jm %}
-  {% when 1 %}
-     {% assign js = "بهار" %}
-  {% when 2 %}
-     {% assign js = "بهار" %}
-  {% when 3 %}
-     {% assign js = "بهار" %}
-  {% when 4 %}
-     {% assign js = "تابستان" %}
-  {% when 5 %}
-     {% assign js = "تابستان" %}
-  {% when 6 %}
-     {% assign js = "تابستان" %}
-  {% when 7 %}
-     {% assign js = "پاییز" %}
-  {% when 8 %}
-     {% assign js = "پاییز" %}
-  {% when 9 %}
-     {% assign js = "پاییز" %}
-  {% when 10 %}
-     {% assign js = "زمستان" %}
-  {% when 11 %}
-     {% assign js = "زمستان" %}
-  {% when 12 %}
-     {% assign js = "زمستان" %}
-{% endcase %}
+        {% assign jyp = jy | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
+        {% assign jdp = jd | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
 
-{% assign jyp = jy | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
-{% assign jdp = jd | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
+        <p dir="{{ page.usediv }}" style="margin:0">
+            &#128197; تاریخ نگارش:
+            <span id="adate" style="color:green;font-weight:bold"> {{ jdp }} {{ jmn }} {{ jyp }} </span>
+        </p>
 
-<p dir="{{ page.usediv }}" style="margin:0">
-&#128197; تاریخ نگارش: 
-  <span style="color:green;font-weight:bold"> {{ jdp }} {{ jmn }} {{ jyp }} </span>
-</p>
+        {% if page.image %}
+        <img name="aimage" src="{{ page.image }}" alt="image" style="display:block;margin-left:auto;margin-right:auto;width:80%;">
+        {% endif %}
 
-{% if page.image %}
-<img src="{{ page.image }}" alt="image" style="display:block;margin-left:auto;margin-right:auto;width:80%;">
-{% endif %}
+        {% assign nw = page.content | number_of_words %}
+        {% assign read_time1 = nw | divided_by: 150.0 | round %}
+        {% assign read_time2 = nw | divided_by: 250.0 | round %}
+        {% if read_time2 < 1 %}
+        {% assign read_time = "کمتر از یک" %}
+        {% elsif read_time1 == read_time2 %}
+        {% assign read_time = read_time1 %}
+        {% else %}
+        {% assign read_time = read_time2 | append: " تا " | append: read_time1 %}
+        {% endif %}
+        {% assign read_time = read_time | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
+        {% assign nwp = nw | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
 
-{% assign nw = page.content | number_of_words %}
-{% assign read_time1 = nw | divided_by: 150.0 | round %}
-{% assign read_time2 = nw | divided_by: 250.0 | round %}
-{% if read_time2 < 1 %}
-   {% assign read_time = "کمتر از یک" %}
-{% elsif read_time1 == read_time2 %}
-    {% assign read_time = read_time1 %}
-{% else %}
-   {% assign read_time = read_time2 | append: " تا " | append: read_time1 %}
-{% endif %}
-{% assign read_time = read_time | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
-{% assign nwp = nw | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
+        <p dir="{{ page.usediv }}" style="margin-bottom:1cm;margin-top:0" title="با فرض خواندن ۱۵۰ تا ۲۵۰ کلمه در دقیقه (تعداد کلمات: {{ nwp }})">
+            &#x1F551; مدت‌زمان مطالعه:
+            <span id="areadtimemin" style="color:green;font-weight:bold"> {{ read_time }} </span>
+            <span style="color:green;font-weight:bold"> دقیقه </span>
+        </p>
 
-<p dir="{{ page.usediv }}" style="margin-bottom:1cm;margin-top:0" title="با فرض خواندن ۱۵۰ تا ۲۵۰ کلمه در دقیقه (تعداد کلمات: {{ nwp }})">
-&#x1F551; مدت‌زمان مطالعه:
-  <span style="color:green;font-weight:bold"> {{ read_time }} </span>
-  <span style="color:green;font-weight:bold"> دقیقه </span>
-</p>
+        {% if page.googlesearchbtn %}
+        <div dir="{{ page.usediv }}" style="text-align:center">
+            <a id="agooglesearchbtn" href="https://www.google.com/search?q={{ page.googlesearchbtn }}" title="Click to search google for '{{ page.googlesearchbtn }}'">
+                جستجوی اطلاعات در گوگل
+            </a>
+        </div>
+        {% endif %}
+        {% if page.publishlink %}
+        {% assign lp = page.publishlink | split : "/" %}
+        <p dir="rtl">
+            &#9413; منتشرشده در:
+            <a id="apublishlink" style="color:green;font-weight:bold" href="{{ page.publishlink }}" dir="ltr"> {{ lp[2] }} </a></span>
+        </p>
+        {% endif %}
 
-{% if page.googlesearchbtn %}
-<div dir="{{ page.usediv }}" style="text-align:center">
-<a href="https://www.google.com/search?q={{ page.googlesearchbtn }}" title="Click to search google for '{{ page.googlesearchbtn }}'">
-جستجوی اطلاعات در گوگل
-</a> 
-</div>
-{% endif %}
-{% if page.publishlink %}
-{% assign lp = page.publishlink | split : "/" %}
-<p dir="rtl">
-&#9413; منتشرشده در: 
-  <a style="color:green;font-weight:bold" href="{{ page.publishlink }}" dir="ltr"> {{ lp[2] }} </a></span>
-</p>
-{% endif %}
+        <hr />
 
-<hr/>
+    </div>
 
-</div>
-{% assign paragraphs = page.content | newline_to_br | strip_newlines | split: '<br />' %}
-{% for p in paragraphs %}
-{% if p contains "insertspoileralert" %}
-<div style="text-align:center;margin-bottom:3cm;margin-top:0">
-<span style="color:red;">
-&#9888; هشدار افشای محتوا &#9888;
-</span>
-</div>
-{% elsif  p contains "insertimage1" %}
-   <img src="{{ page.image1 }}" alt="image 1" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
-{% elsif p contains "insertimage2" %}
-  <img src="{{ page.image2 }}" alt="image 2" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
-{% elsif p contains "insertimage3" %}
-  <img src="{{ page.image3 }}" alt="image 3" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
-{% elsif p contains "insertimage4" %}
-  <img src="{{ page.image4 }}" alt="image 4" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
-{% elsif p contains "insertimage5" %}
-  <img src="{{ page.image5 }}" alt="image 5" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
-{% else %}
-<div dir="{{ page.usediv }}"> 
-{{ p }}
-</div>
-{% endif %}
-{% endfor %}
+    <article>
+        {% assign paragraphs = page.content | newline_to_br | strip_newlines | split: '<br />' %}
+        {% for p in paragraphs %}
+        {% if p contains "insertspoileralert" %}
+        <div style="text-align:center;margin-bottom:3cm;margin-top:0">
+            <span style="color:red;">
+                &#9888; هشدار افشای محتوا &#9888;
+            </span>
+        </div>
+        {% elsif  p contains "insertimage1" %}
+        <img name="aimage" src="{{ page.image1 }}" alt="image 1" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
+        {% elsif p contains "insertimage2" %}
+        <img name="aimage" src="{{ page.image2 }}" alt="image 2" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
+        {% elsif p contains "insertimage3" %}
+        <img name="aimage" src="{{ page.image3 }}" alt="image 3" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
+        {% elsif p contains "insertimage4" %}
+        <img name="aimage" src="{{ page.image4 }}" alt="image 4" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
+        {% elsif p contains "insertimage5" %}
+        <img name="aimage" src="{{ page.image5 }}" alt="image 5" style="display:block;margin-left:auto;margin-right:auto;max-width:90%;">
+        {% else %}
+        <div dir="{{ page.usediv }}">
+            {{ p }}
+        </div>
+        {% endif %}
+        {% endfor %}
 
+    </article>
 
-{% if page.twitterlink %}
-<hr/>
-<div style="text-align:center;margin:1cm">
-<a href="{{ page.twitterlink }}" title="Discuss on Twitter">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" > 
- <path style="fill:blue;fill-opacity:1;" d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path> 
-</svg>
-</a>
-</div>
-{% endif %}
+    <div id="afooterinfo">
+        {% if page.twitterlink %}
+        <hr />
+        <div style="text-align:center;margin:1cm">
+            <a id="atwitterlink" href="{{ page.twitterlink }}" title="Discuss on Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path style="fill:blue;fill-opacity:1;" d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path>
+                </svg>
+            </a>
+        </div>
+        {% endif %}
 
-<hr/>
-<p dir="{{ page.usediv }}" style="text-align:center;font-size:small;margin:0.5cm">
-«تمامی حقوق محفوظ است»
-</p>
+        <hr />
+        <p dir="{{ page.usediv }}" style="text-align:center;font-size:small;margin:0.5cm">
+            «تمامی حقوق محفوظ است»
+        </p>
+    </div>

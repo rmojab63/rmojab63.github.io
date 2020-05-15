@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="{{ page.htmllang }}" dir="{{ page.htmldir }}" >
   <head>
     <meta charset="utf-8">
@@ -16,6 +16,9 @@
 <meta name="twitter:card"  content="summary">
 {% if page.image %}
 <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+{% endif %}
+{% if page.posttype %}
+<meta name="posttype" content="{{ page.posttype }}">
 {% endif %}
 <!-- end of Twitter cards -->
 	<script>
@@ -112,7 +115,7 @@
     <!-- MAIN CONTENT -->
     <div class="outer"> 
       <section  class="inner" style="background-color: ghostwhite;">
-        {{ content }}
+          {{  content | strip_newlines | replace: '  ', '' }}
       </section> 
     </div>
 
