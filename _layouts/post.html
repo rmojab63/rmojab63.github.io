@@ -10,7 +10,9 @@ author: رامین مجاب
     <div id="aheaderinfo" dir="{{ page.usediv }}">
 
         <h1 style="text-align:center;"> <span id="atitle">{{ page.heading }}</span></h1>
-		<p style="text-align:center;color:gray;"> <span id="asubtitle">«{{ page.heading2 }}»</span></p>
+		  {% if page.heading2 %}
+        <p style="text-align:center;color:gray;"> <span id="asubtitle">«{{ page.heading2 }}»</span></p>
+        {% endif %} 
 
         <p dir="{{ page.usediv }}" style="margin:0">
             &#9998; نویسنده:
