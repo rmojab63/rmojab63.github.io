@@ -3,6 +3,7 @@ layout: post
 posttype: 4
 htmllang: fa
 heading: ترور جسی جیمز توسط روبرت فورد بزدل (۲۰۰۷)
+heading2: معرفی فیلم
 googlesearchbtn: The Assassination of Jesse James by the Coward Robert Ford
 author: رامین مجاب
 usediv: auto
