@@ -4,9 +4,10 @@ posttype: 2
 htmllang: fa
 year: ۱۳۹۵
 season: پاییز
-heading: مصاحبه در خصوص نقدینگی
+title: مصاحبه در خصوص نقدینگی
 author: رامین مجاب
 usediv: auto
+postref: /2/2017-10-17-tazade_manafe.md[]/2/2019-7-23-varte_eshtebahat.md[]/1/2015-2-2-وزارتخانه بانک مرکزی.md[]/2/2018-4-18-adoo_shavad_sabab.md[]/2/2019-12-26-fesade_gheimatgozari.md[]/2/2018-4-28-gheimat_showra.md[]/2/2018-9-9-bare_sangin.md[]/2/2018-6-1-sekeye_ramzarz.md[]/2/2017-8-15-ba_rantjooha_chekonim.md[]/2/2016-9-6-ronaghe_maskan.md
 ---
 
 

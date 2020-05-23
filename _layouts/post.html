@@ -9,9 +9,9 @@ author: رامین مجاب
 
     <div id="aheaderinfo" dir="{{ page.usediv }}">
 
-        <h1 style="text-align:center;"> <span id="atitle">{{ page.heading }}</span></h1>
-		  {% if page.heading2 %}
-        <p style="text-align:center;color:gray;"> <span id="asubtitle">«{{ page.heading2 }}»</span></p>
+        <h1 style="text-align:center;"> <span id="atitle">{{ page.title }}</span></h1>
+		  {% if page.subtitle %}
+        <p style="text-align:center;color:gray;"> <span id="asubtitle">«{{ page.subtitle }}»</span></p>
         {% endif %} 
 
         <p dir="{{ page.usediv }}" style="margin:0">
@@ -219,6 +219,32 @@ author: رامین مجاب
         </div>
         {% endif %}
 
+        {% if page.postref %}
+        <hr />
+        <div dir="{{ page.usediv}}" style="margin:1cm">
+            <p style="margin:0">
+                پست‌های مشابه:
+            </p>
+            <ul>
+                {% assign links = page.postref | split: "[]" %}
+                {% for pp in links %}
+                {% for post in site.posts %}
+                {% if post.path contains pp %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        <div class="PageNavigation">
+            {% if page.previous.url %}
+            <a class="prev" href="{{page.previous.url}}" title="{{page.previous.title}}">&laquo; پست قبل</a>
+            {% endif %}
+            {% if page.next.url %}
+            <a class="next" href="{{page.next.url}}" title="{{page.next.title}}">پست بعد &raquo;</a>
+            {% endif %}
+        </div>
         <hr />
         <p dir="{{ page.usediv }}" style="text-align:center;font-size:small;margin:0.5cm">
             «تمامی حقوق محفوظ است»

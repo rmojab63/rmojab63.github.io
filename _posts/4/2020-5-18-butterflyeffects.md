@@ -2,7 +2,7 @@
 layout: post
 posttype: 4
 htmllang: fa
-heading: اثر پروانه‌ای (۲۰۰۴)
+title: اثر پروانه‌ای (۲۰۰۴)
 heading2: معرفی فیلم
 googlesearchbtn: Butterfly Effect (2006) Film
 author: رامین مجاب

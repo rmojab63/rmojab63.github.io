@@ -1,7 +1,7 @@
 ---
 layout: presentation
 htmllang: en
-heading: Estimation Framework
+title: Estimation Framework
 ---
 
 <section data-markdown data-separator="^SlideNext$" data-separator-vertical="^SlideNextV$">

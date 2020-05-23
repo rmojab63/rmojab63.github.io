@@ -19,7 +19,7 @@ layout: default
 <div dir="rtl">
 <ul style="margin-right: 20px;">
 {% for post in season.items %}
-<li><div> <a style="font-weight:bold" href="{{ post.url }}" >{{ post.heading }}</a> 
+<li><div> <a style="font-weight:bold" href="{{ post.url }}" >{{ post.title }}</a> 
 <p>
 {{ post.content | newline_to_br | strip_newlines | split: '<br />' | first | strip_html | append: " [. . .]" }}</p></div></li>
 	{% endfor %}

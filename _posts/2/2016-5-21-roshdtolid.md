@@ -4,12 +4,13 @@ posttype: 2
 htmllang: fa
 year: ۱۳۹۵
 season: بهار
-heading: تحلیلی از رشد اقتصاد ایران در سال ۱۳۹۵
+title: تحلیلی از رشد اقتصاد ایران در سال ۱۳۹۵
 author: رامین مجاب
 usediv: auto
 image1: /assets/imgs/roshdtable95.png
 image2: /assets/imgs/roshdtable95_2.png
 image3: /assets/imgs/roshdtable95_3.png
+postref: /2/2018-6-23-eslahatsakhtari_anes.md[]/2/2018-5-28-arz_saghf_gheimat.md[]/2/2019-5-15-pooli_shodane_kasri.md[]/2/2017-8-15-ba_rantjooha_chekonim.md[]/1/2014-10-15-راه سوم.md[]/2/2017-10-17-tazade_manafe.md[]/1/2015-2-2-وزارتخانه بانک مرکزی.md[]/2/2019-6-24-taatre_ghamangiz.md[]/2/2019-6-9-tashihe_khata.md[]/2/2018-1-28-nim100_sootafahom.md
 ---
 اقتصاد ایران در ۵۵ سال اخیر به‌طور متوسط سالانه ۴٫۶ درصد رشد کرده است. البته حوادثی نظیر انقلاب و جنگ و شوک‌های نفتی باعث گردیده است که آمارهای رشد نسبتاً پراکنده باشند. اگر بر دهه‌های ۱۳۷۰ و ۱۳۸۰ تمرکز کنیم، متوسط رشد چندان متفاوت نخواهد، اما مطابق با انتظار پراکندگی کاهش می‌یابد. این موضوع برای بخش‌های مختلف نیز تقریباً برقرار است. در این خصوص جدول ۱ را ببینید.
 
@@ -48,4 +49,3 @@ insertimage3
 http://www.worldbank.org/en/country/iran/overview 
 
 [۳] ضریب وقفه در فرایند خودرگرسیون مرتبه اول ۰٫۲۴ محاسبه می‌شود و معمولاً در مدلسازی‌ها پیچیده‌تر نیز این ارزش حداقل افزایش نمی‌یابد.
-
