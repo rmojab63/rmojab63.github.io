@@ -8,7 +8,7 @@ title: پولی‌کردن کسری بودجه یا ریاضت اقتصادی؟
 author: رامین مجاب
 usediv: auto
 image1: /assets/imgs/poolishodan_kasri.png
-postref: /2/2018-5-23-shafafiat_mokamel.md[]/2/2017-8-15-ba_rantjooha_chekonim.md[]/2/2016-6-29-jange_gheimat_ponzi.md[]/2/2016-5-21-roshdtolid.md[]/2/2018-7-14-koridor_nerkharz.md[]/2/2020-4-13-vazife_12.md[]/2/2017-8-27-kahesh_sood_banki.md[]/2/2019-3-5-roshd_ayandeh.md[]/2/2019-9-6-pish_tavarom.md[]/2/2018-6-1-sekeye_ramzarz.md
+postref: /2/2018-5-23-shafafiat_mokamel.md[]/2/2017-8-15-ba_rantjooha_chekonim.md[]/2/2016-6-29-jange_gheimat_ponzi.md[]/2/2016-5-21-roshdtolid.md[]/2/2018-7-14-koridor_nerkharz.md[]/2/2020-5-11-hazfe_sefr.md[]/2/2020-4-13-vazife_12.md[]/2/2017-8-27-kahesh_sood_banki.md[]/2/2019-3-5-roshd_ayandeh.md[]/2/2019-9-6-pish_tavarom.md
 ---
 
 در این یادداشت در ابتدا پولی کردن کسری بودجه و سیاست‌های ریاضت اقتصادی با یکدیگر مقایسه می‌شود و سپس در توضیح بیشتر نتیجه ارائه شده، نقش پول در اقتصاد در یک مثال ساده بحث می‌شود.

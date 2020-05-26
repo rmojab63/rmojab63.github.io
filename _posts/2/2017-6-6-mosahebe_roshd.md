@@ -7,7 +7,7 @@ season: بهار
 title: مصاحبه؛ به بهانه «اعلام رشد ۸٫۳ درصدی مرکز آمار» 
 author: رامین مجاب
 usediv: auto
-postref: /2/2018-5-28-arz_saghf_gheimat.md[]/2/2018-9-9-bare_sangin.md[]/1/2014-4-13-معبدی برای اقتصاددان‌ها.md[]/1/2014-10-15-راه سوم.md[]/2/2018-6-1-sekeye_ramzarz.md[]/2/2018-5-23-shafafiat_mokamel.md[]/2/2018-4-18-adoo_shavad_sabab.md[]/2/2019-12-26-fesade_gheimatgozari.md[]/2/2016-9-6-ronaghe_maskan.md[]/2/2018-7-31-raees_jadid.md
+postref: /2/2018-5-28-arz_saghf_gheimat.md[]/2/2018-9-9-bare_sangin.md[]/2/2020-5-11-hazfe_sefr.md[]/1/2014-4-13-معبدی برای اقتصاددان‌ها.md[]/1/2014-10-15-راه سوم.md[]/2/2018-6-1-sekeye_ramzarz.md[]/2/2018-5-23-shafafiat_mokamel.md[]/2/2018-4-18-adoo_shavad_sabab.md[]/2/2019-12-26-fesade_gheimatgozari.md[]/2/2016-9-6-ronaghe_maskan.md
 ---
 
 1. **بر اساس گزارش مرکز آمار ایران، در سال گذشته رشد 8.3 درصدی محصول ناخالص داخلی با نفت و 6.3 درصدی محصول ناخالص داخلی بدون نفت حاصل شده است. این تصویر از رشد اقتصادی سال 95 چه وضعیتی از اقتصاد ایران را ترسیم می‌کند؟**

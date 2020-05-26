@@ -7,7 +7,7 @@ season: تابستان
 title: اصلاحات ساختاری در نظام بانکی و آنستیژیا اَورنس* 
 author: رامین مجاب
 usediv: rtl
-postref: /2/2019-11-25-kodam_tabe_refah.md[]/1/2018-12-3-یک داستان.md[]/2/2018-4-18-adoo_shavad_sabab.md[]/2/2016-5-21-roshdtolid.md[]/2/2020-4-13-vazife_12.md[]/2/2020-2-4-zire_khat.md[]/2/2018-1-28-nim100_sootafahom.md[]/2/2016-6-29-jange_gheimat_ponzi.md[]/2/2017-7-25-mithril.md[]/2/2018-5-26-roshd_3sal.md
+postref: /2/2019-11-25-kodam_tabe_refah.md[]/1/2018-12-3-یک داستان.md[]/2/2018-4-18-adoo_shavad_sabab.md[]/2/2016-5-21-roshdtolid.md[]/2/2020-5-11-hazfe_sefr.md[]/2/2020-4-13-vazife_12.md[]/2/2020-2-4-zire_khat.md[]/2/2018-1-28-nim100_sootafahom.md[]/2/2016-6-29-jange_gheimat_ponzi.md[]/2/2017-7-25-mithril.md
 ---
 در این متن، پس از توضیح این نکته که ایستگاه اول قطار سیاست‌گذاری دولت یک وضعیت عدم تعادلی نسبتاً شدید بود، اصلاحات ساختاری در نظام بانکی بحث می‌شود. 
 

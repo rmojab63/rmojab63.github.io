@@ -7,7 +7,7 @@ season: بهار
 title: مصاحبه با موضوع وضعیت اقتصاد کلان
 author: رامین مجاب
 usediv: rtl
-postref: /2/2019-9-7-siasatgozare_eghtesadi.md[]/2/2016-9-6-ronaghe_maskan.md[]/2/2016-8-8-tahlil_nerkh_blmdt.md[]/2/2017-8-1-seif3rah.md[]/2/2017-12-19-makharej_roshd.md[]/2/2019-3-5-roshd_ayandeh.md[]/2/2018-9-9-bare_sangin.md[]/2/2017-8-15-ba_rantjooha_chekonim.md[]/2/2018-1-9-sarkoob_hemayt_naghd.md[]/2/2018-5-28-arz_saghf_gheimat.md
+postref: /2/2020-5-11-hazfe_sefr.md[]/2/2019-9-7-siasatgozare_eghtesadi.md[]/2/2016-9-6-ronaghe_maskan.md[]/2/2016-8-8-tahlil_nerkh_blmdt.md[]/2/2017-8-1-seif3rah.md[]/2/2017-12-19-makharej_roshd.md[]/2/2019-3-5-roshd_ayandeh.md[]/2/2018-9-9-bare_sangin.md[]/2/2017-8-15-ba_rantjooha_chekonim.md[]/2/2018-1-9-sarkoob_hemayt_naghd.md
 ---
 
 1. **بر اساس آخرین آمارهای اقتصادی، حجم نقدینگی بیش از 1700 هزار میلیارد تومان است و تورم نقطه به نقطه نیز در پایان سال 97 در مرز 50 درصد قرار گرفت. بازارهای مالی در سال قبل نیز دستخوش تلاطم‌های شدیدی بوده‌اند. اما ماه‌های آخر سال به مراتب شاهد وضعیت آرام‌تری در اقتصاد کشور بودیم اما بازهم در سال جدید نوسانات شدت گرفته است. با توجه به آمارها و واقعیات اقتصادی، ارزیابی شما از وضعیت بازارهای مالی چیست؟**
