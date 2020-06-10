@@ -161,27 +161,50 @@ author: رامین مجاب
 
     <article>
         {% assign paragraphs = page.content | newline_to_br | strip_newlines | split: '<br />' %}
-		{% assign blockstart = 0 %}
-		{% assign blocktext = "" %}
+        {% assign blockstart = 0 %}
+        {% assign blocktext = "" %}
+        {% assign poemstart = 0 %}
+        {% assign poemtext = "" %}
         {% for p in paragraphs %}
-		
-		{% if p contains "blockstart" %}
-		   {% assign blockstart = 1 %}
-		   {% continue %}
-		{% endif %}
-		{% if p contains "blockend" %}
-		    <div dir="{{ page.usediv }}">
-		     {{ blocktext }}
-			</div>
-		   {% assign blockstart = 0 %}
-		   {% assign blocktext = "" %}
-		   {% continue %}
-		{% endif %}
-		{% if blockstart == 1 %}
-		   {% assign blocktext = blocktext | append: p %}
-		   {% continue %}
-		{% endif %}
-		
+
+        {% if p contains "blockstart" %}
+        {% assign blockstart = 1 %}
+        {% continue %}
+        {% endif %}
+
+        {% if p contains "poemstart" %}
+        {% assign poemstart = 1 %}
+        {% continue %}
+        {% endif %}
+
+        {% if p contains "blockend" %}
+        <div dir="{{ page.usediv }}">
+            {{ blocktext }}
+        </div>
+        {% assign blockstart = 0 %}
+        {% assign blocktext = "" %}
+        {% continue %}
+        {% endif %}
+
+        {% if p contains "poemend" %}
+        <div dir="{{ page.usediv }}">
+            {{ poemtext }}
+        </div>
+        {% assign poemstart = 0 %}
+        {% assign poemtext = "" %}
+        {% continue %}
+        {% endif %}
+
+        {% if blockstart == 1 %}
+        {% assign blocktext = blocktext | append: p %}
+        {% continue %}
+        {% endif %}
+
+        {% if poemstart == 1 %}
+        {% assign poemtext = poemtext | append: "<br />" | append: p %}
+        {% continue %}
+        {% endif %}
+
         {% if p contains "insertspoileralert" %}
         <div style="text-align:center;margin-bottom:3cm;margin-top:0">
             <span style="color:red;">
