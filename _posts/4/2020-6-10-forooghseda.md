@@ -8,7 +8,7 @@ googlesearchbtn: فروغ فرخزاد تنها صداست که می ماند
 author: رامین مجاب
 usediv: auto
 image: /assets/imgs/4/forooghseda.png
-twitterlink:
+twitterlink: https://twitter.com/rmojab63/status/1270968545632018432
 ---
 
 poemstart
