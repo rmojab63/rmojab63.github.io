@@ -11,4 +11,5 @@ What you should expect:
 
 ![words](/assets/svgs/words.svg)
 
-*  [کامنت‌ها](/pages/comments.html)
+*  [کامنت](/pages/comments.html)
+*  [داستان](/pages/stories.html)
