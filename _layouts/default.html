@@ -1,76 +1,77 @@
 ﻿<!DOCTYPE html>
-<html lang="{{ page.htmllang }}" dir="{{ page.htmldir }}" >
+<html lang="{{ page.htmllang }}" dir="{{ page.htmldir }}">
+
 <head>
     <meta charset="utf-8">
     <title>Ramin Mojab</title>
-    <meta name="description" content="Ramin Mojab is a research assistant in Economics at Monetary and Banking Research Institute.">
+    <meta name="description"
+        content="Ramin Mojab is a research assistant in Economics at Monetary and Banking Research Institute.">
     <meta name="author" content="Ramin Mojab">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <link rel="shortcut icon" href="{{ 'assets/me.ico?v=' | append: site.github.build_revision | relative_url}}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url}}">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url}}">
     <!-- Twitter cards -->
     <!--Calculate time-->
     {% assign nw = page.content | number_of_words %}
     {% assign read_time1 = nw | divided_by: 150.0 | round %}
     {% assign read_time2 = nw | divided_by: 250.0 | round %}
-    {% if read_time2 < 1 %}
-    {% assign read_time = "کمتر از یک" %}
-    {% elsif read_time1 == read_time2 %}
-    {% assign read_time = read_time1 %}
-    {% else %}
-    {% assign read_time = read_time2 | append: " تا " | append: read_time1 %}
-    {% endif %}
-    {% assign read_time = read_time | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
-    {% assign nwp = nw | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰"  %}
-    <!--END Calculate time-->
+    {% if read_time2 < 1 %} {% assign read_time="کمتر از یک" %} {% elsif read_time1==read_time2 %} {% assign
+        read_time=read_time1 %} {% else %} {% assign read_time=read_time2 | append: " تا " | append: read_time1 %} {%
+        endif %} {% assign read_time=read_time | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" |
+        replace: 5, "۵" | replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰" %} {%
+        assign nwp=nw | replace: 1, "۱" | replace: 2, "۲" | replace: 3, "۳" | replace: 4, "۴" | replace: 5, "۵" |
+        replace: 6, "۶" | replace: 7, "۷" | replace: 8, "۸" | replace: 9, "۹" | replace: 0, "۰" %} <!--END Calculate
+        time-->
 
 
-    <meta name="twitter:site" content="@rmojab63">
-    <meta name="twitter:title" content="{{ page.title }}">
-    <meta name="twitter:description" content="{{ "(&#x1F551; " | append: read_time | append: " دقیقه) " | append: page.content | strip_html | truncate: 200 }}">
-    <meta name="twitter:card" content="summary">
-    {% if page.image %}
-    <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
-    {% endif %}
-    {% if page.posttype %}
-    <meta name="posttype" content="{{ page.posttype }}">
-    {% endif %}
-    <!-- end of Twitter cards -->
-    <script>
-        MathJax.Hub.Config({
-            config: ["MMLorHTML.js"],
-            extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
-            jax: ["input/TeX"],
-            tex2jax: {
-                inlineMath: [['$', '$'], ["\\(", "\\)"]],
-                displayMath: [['$$', '$$'], ["\\[", "\\]"]],
-                processEscapes: true
-            },
-            TeX: {
-                TagSide: "right",
-                TagIndent: ".8em",
-                MultLineWidth: "85%",
-                equationNumbers: {
-                    autoNumber: "AMS",
+        <meta name="twitter:site" content="@rmojab63">
+        <meta name="twitter:title" content="{{ page.title }}">
+        <meta name="twitter:description" content="{{ " (&#x1F551; " | append: read_time | append: "
+            دقیقه) " | append: page.content | strip_html | truncate: 200 }}">
+        <meta name="twitter:card" content="summary">
+        {% if page.image %}
+        <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+        {% endif %}
+        {% if page.posttype %}
+        <meta name="posttype" content="{{ page.posttype }}">
+        {% endif %}
+        <!-- end of Twitter cards -->
+        <script>
+            MathJax.Hub.Config({
+                config: ["MMLorHTML.js"],
+                extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+                jax: ["input/TeX"],
+                tex2jax: {
+                    inlineMath: [['$', '$'], ["\\(", "\\)"]],
+                    displayMath: [['$$', '$$'], ["\\[", "\\]"]],
+                    processEscapes: true
                 },
-                unicode: {
-                    fonts: "STIXGeneral,'Arial Unicode MS'"
-                }
-            },
-            showProcessingMessages: false
-        });
-    </script>
-    <script type="text/javascript" async
+                TeX: {
+                    TagSide: "right",
+                    TagIndent: ".8em",
+                    MultLineWidth: "85%",
+                    equationNumbers: {
+                        autoNumber: "AMS",
+                    },
+                    unicode: {
+                        fonts: "STIXGeneral,'Arial Unicode MS'"
+                    }
+                },
+                showProcessingMessages: false
+            });
+        </script>
+        <script type="text/javascript" async
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-    <style>
-        .topnav {
-            overflow: visible;
-            border-style: solid;
-            border-color: darkgray;
-            background-color: ghostwhite;
-        }
+            </script>
+        <style>
+            .topnav {
+                overflow: visible;
+                border-style: solid;
+                border-color: darkgray;
+                background-color: ghostwhite;
+            }
 
             .topnav a {
                 margin: 0;
@@ -83,28 +84,28 @@
                 text-decoration: none;
             }
 
-                .topnav a:hover {
-                    color: black;
-                }
+            .topnav a:hover {
+                color: black;
+            }
 
             .topnav .icon {
                 display: none;
             }
 
-        @media screen and (max-width: 600px) {
-            .topnav a:not(:first-child) {
-                display: none;
+            @media screen and (max-width: 600px) {
+                .topnav a:not(:first-child) {
+                    display: none;
+                }
+
+                .topnav a.icon {
+                    display: inline;
+                }
             }
 
-            .topnav a.icon {
-                display: inline;
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-            .topnav.responsive {
-                position: relative;
-            }
+            @media screen and (max-width: 600px) {
+                .topnav.responsive {
+                    position: relative;
+                }
 
                 .topnav.responsive .icon {
                     position: absolute;
@@ -116,65 +117,63 @@
                     float: none;
                     display: inline;
                 }
-        }
+            }
 
-        ul {
-            padding-right: 30px;
-        }
-        <!--
+            ul {
+                padding-right: 30px;
+            }
 
-        for rtl nested lists-- >
+            < !-- for rtl nested lists-->.PageNavigation {
+                display: block;
+                width: auto;
+                overflow: hidden;
+            }
 
-        .PageNavigation {
-            display: block;
-            width: auto;
-            overflow: hidden;
-        }
+            .PageNavigation a {
+                display: block;
+                width: 50%;
+                float: left;
+                margin: 1em 0;
+            }
 
-        .PageNavigation a {
-            display: block;
-            width: 50%;
-            float: left;
-            margin: 1em 0;
-        }
-
-        .PageNavigation .next {
-            text-align: right;
-        }
-    </style>
+            .PageNavigation .next {
+                text-align: right;
+            }
+        </style>
 </head>
- 
-  <body>
+
+<body>
     <div class="outer">
         <header class="inner">
-          <div class="topnav" id="myTopnav">
-		     <a href="/">Ramin Mojab</a>
-			 <a href="/pages/comments.html">کامنت‌ها</a>
-			 <a href="/pages/neveshteha.html">نوشته‌های عمومی‌تر</a>
-			 <a href="/pages/takhasosi.html">تخصصی‌تر</a> 
-			 <a href="javascript:void(0);" class="icon" onclick="navitems()">...</a>
-	      </div>
+            <div class="topnav" id="myTopnav">
+                <a href="/">Ramin Mojab</a>
+                <a href="/pages/stories.html">داستان</a>
+                <a href="/pages/comments.html">کامنت‌ها</a>
+                <a href="/pages/neveshteha.html">نوشته‌های عمومی‌تر</a>
+                <a href="/pages/takhasosi.html">تخصصی‌تر</a>
+                <a href="javascript:void(0);" class="icon" onclick="navitems()">...</a>
+            </div>
         </header>
     </div>
-   
+
     <!-- MAIN CONTENT -->
-    <div class="outer"> 
-      <section  class="inner" style="background-color: ghostwhite;">
-          {{  content | strip_newlines | replace: '  ', '' }}
-      </section> 
+    <div class="outer">
+        <section class="inner" style="background-color: ghostwhite;">
+            {{ content | strip_newlines | replace: ' ', '' }}
+        </section>
     </div>
 
-	
-  </body>
-  <script>
-function navitems() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
+
+</body>
+<script>
+    function navitems() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
 </script>
 
 </html>
