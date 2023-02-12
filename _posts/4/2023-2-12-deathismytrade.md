@@ -7,7 +7,7 @@ heading2: معرفی کتاب
 googlesearchbtn: Death is my trade
 author: رامین مجاب
 usediv: auto
-image: /assets/imgs/4/rudolflange..jpg
+image: /assets/imgs/4/rudolflange.jpg
 twitterlink:
 ---
 
